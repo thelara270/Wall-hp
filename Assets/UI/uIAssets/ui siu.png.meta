@@ -1,0 +1,1150 @@
+fileFormatVersion: 2
+guid: 8d772d64e0184a24f91e8d5e6ee43d66
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui siu_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3021
+        width: 189
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7be79badc6241c45bbb08b1d2589503
+      internalID: 1395615056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_1
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 3039
+        width: 247
+        height: 297
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a1a96212e62e144b4019ccd8847a5e
+      internalID: 665369143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_2
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 3104
+        width: 260
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7c6c2f31543334cb3f999ba87ba6a9
+      internalID: 550285463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_3
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 3072
+        width: 337
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6b5fb25e972eb4898e9e2661eebc79
+      internalID: -1200921315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_4
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 2599
+        width: 622
+        height: 830
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d066bebcba3f5f458d98b1ec380f76a
+      internalID: 2088735183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_6
+      rect:
+        serializedVersion: 2
+        x: 2770
+        y: 2638
+        width: 638
+        height: 811
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0f1b1c2aa48f9418fff57a323e2430
+      internalID: 403616958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_7
+      rect:
+        serializedVersion: 2
+        x: 3532
+        y: 2649
+        width: 617
+        height: 814
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf998ed49605c994cb9a8c7c09ecba08
+      internalID: 1807452906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_9
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 2720
+        width: 192
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59befca73ea3664cb9682b124329e15
+      internalID: 98409830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_10
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 2688
+        width: 151
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc001b2ed8d00e46bb826cbcd0a7d5b
+      internalID: -27611371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_15
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 2142
+        width: 1222
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69a5180dca937a43995dd6030f3f98f
+      internalID: 1999944770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_16
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 2334
+        width: 213
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e1be7939635de4cac8a5b199df9f9b
+      internalID: 1260705412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_17
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 2334
+        width: 212
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67289952a798c6f42a54995e8d1c57a7
+      internalID: 765061062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_18
+      rect:
+        serializedVersion: 2
+        x: 2449
+        y: 2354
+        width: 150
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e93823195a8a343bdc18c3b82847fb
+      internalID: 1278978177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_19
+      rect:
+        serializedVersion: 2
+        x: 2647
+        y: 2361
+        width: 120
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037f74a2fa1fe4b4d85febe313febd86
+      internalID: 196732663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_23
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 2402
+        width: 527
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939b7750a8a4c374a85c94c73d8e9937
+      internalID: 1732575046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_24
+      rect:
+        serializedVersion: 2
+        x: 3385
+        y: 2378
+        width: 17
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99bfcb7d11fc33478b538636ae532e3
+      internalID: 624554462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_25
+      rect:
+        serializedVersion: 2
+        x: 3612
+        y: 2404
+        width: 401
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84c82c2fdcd1af43a7015cb003e74e2
+      internalID: -72475901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_26
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 2083
+        width: 212
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c288484257ab5418a00c8b6fa10329
+      internalID: -1684861174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_27
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 2171
+        width: 59
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8182fb6c5a33cc4796c6e53fd53fa2f
+      internalID: -1061036559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_28
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 2171
+        width: 133
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9ccf3af246a964fa7303d8da292734
+      internalID: 1412602120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_29
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 1655
+        width: 757
+        height: 634
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2520b55c2993bc4daa8e4849e51a683
+      internalID: 489780090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_31
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 1852
+        width: 402
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986bed494c6991a4e98b1dc436b9f537
+      internalID: 355949924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_32
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 1882
+        width: 186
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc518365c49121439882a49f36d2a67
+      internalID: -1369255500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_33
+      rect:
+        serializedVersion: 2
+        x: 3305
+        y: 1888
+        width: 494
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea84abfd4ff84b42a4c2ff36acbe8f2
+      internalID: 2103187529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_35
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1956
+        width: 894
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44884b6918dda7548bd413054e964611
+      internalID: 624487121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_38
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1017
+        width: 1352
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f1fedbb6194dc47b985b3903795993
+      internalID: -937471277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_39
+      rect:
+        serializedVersion: 2
+        x: 2499
+        y: 1714
+        width: 97
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d47e45a61ee7954488e4e0a8fa7dc35
+      internalID: -1102501486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_40
+      rect:
+        serializedVersion: 2
+        x: 2661
+        y: 1714
+        width: 98
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a662be91b0ebdf34da9d56cbc21c8df5
+      internalID: -1542106060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_41
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 1631
+        width: 186
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ca9b8c4db269d488ce1abb1e983517
+      internalID: 208550750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_42
+      rect:
+        serializedVersion: 2
+        x: 3278
+        y: 1631
+        width: 183
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6114ddcff84c234892412d0cdef10d5
+      internalID: -890486735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_44
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 1445
+        width: 213
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592e605c614aa3d42a5a06994558cc1e
+      internalID: -593980175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_45
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 1445
+        width: 210
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10e094f99cf0fc40b927fc3ff3ebb1e
+      internalID: -325332936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_46
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 1451
+        width: 213
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfb4201ba7f1944eb199493395c8dac
+      internalID: -1924183111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_47
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 1342
+        width: 112
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebb3794459b2c74ca91432f42042d75
+      internalID: 205606409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_48
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 1312
+        width: 197
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fcfabab0b9de540a6f14aa006393ea
+      internalID: -372615471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_49
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 1312
+        width: 198
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b6ccb8fe9a980449f9577f3a82166b
+      internalID: 1818337129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_50
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 1159
+        width: 355
+        height: 354
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281457e27fcd6af4abddb1a44414ac1b
+      internalID: 775492307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_51
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1173
+        width: 213
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0552df12b823c4aa25fe8c62091383
+      internalID: -355118547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_52
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 1173
+        width: 210
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc658eaa3400ce449f374bee56350bd
+      internalID: 342882492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_53
+      rect:
+        serializedVersion: 2
+        x: 2883
+        y: 1185
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da4907a1db98714eabe333461b665c4
+      internalID: 2126907926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_54
+      rect:
+        serializedVersion: 2
+        x: 4259
+        y: 1185
+        width: 912
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6173593ae3447a540abb87c94482b739
+      internalID: 1516171588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_55
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 853
+        width: 1393
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b215232baae765c4191891a8c0dfbb58
+      internalID: -1011986404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_57
+      rect:
+        serializedVersion: 2
+        x: 4382
+        y: 990
+        width: 666
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f760c84f539bd724092ecc5d304dfcab
+      internalID: 489136389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_5
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 2599
+        width: 423
+        height: 354
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 76, y: 60, z: 78, w: 65}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ab1aa863fe9d04faac2259698f40f2
+      internalID: 415109274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui siu_8
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 3034
+        width: 209
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d3f49c1f0884843af869de6f31e048
+      internalID: 1112780663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 832589e9f3e744c43bc3a1af04ac1b7a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ui siu_0: 1395615056
+      ui siu_1: 665369143
+      ui siu_10: -27611371
+      ui siu_11: -599975684
+      ui siu_12: -2062727165
+      ui siu_13: -1224673778
+      ui siu_14: -1360211908
+      ui siu_15: 1999944770
+      ui siu_16: 1260705412
+      ui siu_17: 765061062
+      ui siu_18: 1278978177
+      ui siu_19: 196732663
+      ui siu_2: 550285463
+      ui siu_20: 2058943879
+      ui siu_21: -1419258591
+      ui siu_22: -1311825846
+      ui siu_23: 1732575046
+      ui siu_24: 624554462
+      ui siu_25: -72475901
+      ui siu_26: -1684861174
+      ui siu_27: -1061036559
+      ui siu_28: 1412602120
+      ui siu_29: 489780090
+      ui siu_3: -1200921315
+      ui siu_30: 520315262
+      ui siu_31: 355949924
+      ui siu_32: -1369255500
+      ui siu_33: 2103187529
+      ui siu_34: 513116770
+      ui siu_35: 624487121
+      ui siu_36: -2132173188
+      ui siu_37: -1864448708
+      ui siu_38: -937471277
+      ui siu_39: -1102501486
+      ui siu_4: 2088735183
+      ui siu_40: -1542106060
+      ui siu_41: 208550750
+      ui siu_42: -890486735
+      ui siu_43: -21825471
+      ui siu_44: -593980175
+      ui siu_45: -325332936
+      ui siu_46: -1924183111
+      ui siu_47: 205606409
+      ui siu_48: -372615471
+      ui siu_49: 1818337129
+      ui siu_5: 415109274
+      ui siu_50: 775492307
+      ui siu_51: -355118547
+      ui siu_52: 342882492
+      ui siu_53: 2126907926
+      ui siu_54: 1516171588
+      ui siu_55: -1011986404
+      ui siu_56: 497757637
+      ui siu_57: 489136389
+      ui siu_58: -3858476
+      ui siu_59: -1257840439
+      ui siu_6: 403616958
+      ui siu_60: 407596780
+      ui siu_61: -2124128487
+      ui siu_62: 604530610
+      ui siu_63: -1120752012
+      ui siu_64: 1598306480
+      ui siu_7: 1807452906
+      ui siu_8: 1112780663
+      ui siu_9: 98409830
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

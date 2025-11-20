@@ -2,6 +2,15 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+
+# Unity build folders
+Build/
+Builds/
+Ejecutable/
+*/Build/
+*/Builds/
+*/Ejecutable/
+
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/

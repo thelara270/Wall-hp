@@ -275,12 +275,12 @@ MonoBehaviour:
   velocidad: 10
   velocidadCorrer: 15
   velocidadAgachado: 3
-  fuerzaSalto: 10
+  fuerzaSalto: 15
   centroDeteccion: {fileID: 1347937114722862147}
   tamanoDeteccion: {x: 0.8, y: 0.5, z: 0.8}
   capaSuelo:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!4 &4294894045962058299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5862301646442178157, guid: 853d2e23adf455f44aa0d9cc375bae17, type: 3}

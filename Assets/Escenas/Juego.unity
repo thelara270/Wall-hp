@@ -744,8 +744,8 @@ MonoBehaviour:
       inventario con 1, 2 o 3.'
     mostrarContinuar: 1
     requisito: 4
-  - texto: "Subsistema de cables averiado.\nAc\xE9rcate al panel y conecta cada cable
-      con su color correspondiente."
+  - texto: "Subsistema de datos averiado.\nAc\xE9rcate al panel y conecta cada docuemento
+      con su carpeta correspondiente."
     mostrarContinuar: 1
     requisito: 5
   - texto: "Reparaciones completadas, {NOMBRE}.\nLos sistemas vuelven a funcionar

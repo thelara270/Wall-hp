@@ -1,22 +1,22 @@
-using UnityEngine;
+锘縰sing UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
 public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
-    [Header("Configuraci髇 del encaje")]
+    [Header("Configuraci贸n del encaje")]
     public RectTransform zonaObjetivo;       // Zona donde debe encajar la pieza
-    public float rangoSnap = 20f;            // Tolerancia de encaje en p韝eles
+    public float rangoSnap = 20f;            // Tolerancia de encaje en p铆xeles
     [Range(0, 45)] public float toleranciaRotacion = 10f; // Tolerancia angular
 
-    [Header("Configuraci髇 de posici髇 aleatoria")]
+    [Header("Configuraci贸n de posici贸n aleatoria")]
     public bool usarPosicionAleatoria = true;
     public Vector2 margenBordes = new Vector2(50f, 50f);
     public float distanciaMinimaAlObjetivo = 150f;
     public bool evitarSolapamiento = true;
     public float margenSeparacion = 15f;
 
-    [Header("Configuraci髇 de rotaci髇")]
+    [Header("Configuraci贸n de rotaci贸n")]
     public bool usarRotacionAleatoria = true;
     public bool permitirRotacionManual = true;
     public float incrementoRotacion = 90f;
@@ -46,6 +46,9 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     void Start()
     {
+        posicionInicial = rectTransform.anchoredPosition;
+        rotacionInicial = rectTransform.rotation;
+
         if (usarPosicionAleatoria)
             AsignarPosicionAleatoriaLejana();
 
@@ -54,9 +57,6 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             float angulo = Random.Range(0, 4) * 90f;
             rectTransform.rotation = Quaternion.Euler(0, 0, angulo);
         }
-
-        posicionInicial = rectTransform.anchoredPosition;
-        rotacionInicial = rectTransform.rotation;
     }
 
     private void AsignarPosicionAleatoriaLejana()
@@ -85,8 +85,17 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             nuevaPosicion = new Vector2(x, y);
             intentos++;
 
+            // 1锔忊儯 Validar que no est茅 cerca de su propio objetivo
             posicionValida = Vector2.Distance(nuevaPosicion, ObtenerPosicionObjetivoLocal()) >= distanciaMinimaAlObjetivo;
 
+            // 2锔忊儯 Validar que no est茅 cerca de los objetivos de otras piezas
+            foreach (var otra in todasLasPiezas)
+            {
+                if (otra == this) continue;
+                posicionValida &= Vector2.Distance(nuevaPosicion, otra.ObtenerPosicionObjetivoLocal()) >= distanciaMinimaAlObjetivo;
+            }
+
+            // 3锔忊儯 Validar que no se superponga con otras piezas
             if (posicionValida && evitarSolapamiento)
                 posicionValida = !HaySolapamiento(nuevaPosicion);
 
@@ -97,26 +106,24 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private bool HaySolapamiento(Vector2 nuevaPos)
     {
-        Rect nuevoRect = new Rect(
-            nuevaPos.x - rectTransform.rect.width / 2f - margenSeparacion,
-            nuevaPos.y - rectTransform.rect.height / 2f - margenSeparacion,
-            rectTransform.rect.width + margenSeparacion * 2f,
-            rectTransform.rect.height + margenSeparacion * 2f
-        );
-
         foreach (var otra in todasLasPiezas)
         {
             if (otra == this) continue;
 
-            RectTransform rtOtra = otra.rectTransform;
-            Rect rectOtra = new Rect(
-                rtOtra.anchoredPosition.x - rtOtra.rect.width / 2f,
-                rtOtra.anchoredPosition.y - rtOtra.rect.height / 2f,
-                rtOtra.rect.width,
-                rtOtra.rect.height
-            );
+            // Obtener tama帽os de ambas piezas
+            RectTransform rectOtra = otra.rectTransform;
+            Vector2 sizeEsta = rectTransform.rect.size;
+            Vector2 sizeOtra = rectOtra.rect.size;
 
-            if (nuevoRect.Overlaps(rectOtra))
+            // Convertir posiciones locales a mundo para comparaci贸n
+            Vector3 posEsta = rectTransform.parent.TransformPoint(nuevaPos);
+            Vector3 posOtra = rectOtra.parent.TransformPoint(rectOtra.anchoredPosition);
+
+            // Construir rect谩ngulos (aproximation sin rotaci贸n)
+            Rect rect1 = new Rect((Vector2)posEsta - sizeEsta / 2f, sizeEsta);
+            Rect rect2 = new Rect((Vector2)posOtra - sizeOtra / 2f, sizeOtra);
+
+            if (rect1.Overlaps(rect2))
                 return true;
         }
 
@@ -125,7 +132,7 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private Vector3 ObtenerPosicionObjetivoMundo()
     {
-        // Devuelve la posici髇 en el mundo del centro del objetivo
+        // Devuelve la posici贸n en el mundo del centro del objetivo
         return zonaObjetivo.TransformPoint(zonaObjetivo.rect.center);
     }
 
@@ -152,7 +159,7 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         float distancia = Vector3.Distance(posicionPiezaMundo, posicionObjetivoMundo);
 
-        // Medimos la diferencia de rotaci髇 correctamente
+        // Medimos la diferencia de rotaci贸n correctamente
         float rotPieza = NormalizarAngulo(rectTransform.eulerAngles.z);
         float rotObjetivo = NormalizarAngulo(zonaObjetivo.eulerAngles.z);
         float diferenciaRot = Mathf.Abs(Mathf.DeltaAngle(rotPieza, rotObjetivo));
@@ -161,7 +168,7 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         // Encaja solo si ambas condiciones se cumplen
         if (distancia < rangoSnap && rotacionCorrecta)
         {
-            rectTransform.position = zonaObjetivo.position; // Igualamos posici髇 mundial
+            rectTransform.position = zonaObjetivo.position; // Igualamos posici贸n mundial
             rectTransform.rotation = zonaObjetivo.rotation;
             this.enabled = false; // Fija la pieza
         }
@@ -174,7 +181,7 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void ReiniciarEstado()
     {
-        // Restablece la rotaci髇 inicial o aleatoria
+        // Restablece la rotaci贸n inicial o aleatoria
         if (usarRotacionAleatoria)
         {
             float angulo = Random.Range(0, 4) * 90f;
@@ -185,7 +192,7 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             rectTransform.rotation = Quaternion.identity;
         }
 
-        // Restablece la posici髇 (aleatoria o inicial)
+        // Restablece la posici贸n (aleatoria o inicial)
         if (usarPosicionAleatoria)
         {
             AsignarPosicionAleatoriaLejana();
@@ -196,7 +203,7 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             rectTransform.anchoredPosition = posicionInicial;
         }
 
-        // Restaura el CanvasGroup si lo ten韆s modificado
+        // Restaura el CanvasGroup si lo ten铆as modificado
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }
@@ -219,7 +226,7 @@ public class PiezaPuzzle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private Vector2 ObtenerPosicionObjetivoLocal()
     {
-        // Mantiene compatibilidad con la distancia m韓ima al generar aleatoriamente
+        // Mantiene compatibilidad con la distancia m铆nima al generar aleatoriamente
         Vector2 posLocal;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             rectTransform.parent as RectTransform,

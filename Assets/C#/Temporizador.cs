@@ -16,7 +16,7 @@ public class Temporizador : MonoBehaviour
     public GameObject objetoActivar;
     public GameObject hud;
 
-    private float tiempoRestante;
+    public float tiempoRestante;
     private bool enMarcha = true;
 
     void Start()

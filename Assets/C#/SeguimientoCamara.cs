@@ -38,28 +38,29 @@ public class SeguimientoCamara : MonoBehaviour
 
     void SeguirJugador()
     {
-        // Direccion hacia el jugador
         Vector3 dir = jugador.position - transform.position;
 
         if (dir.sqrMagnitude < 0.001f)
             return;
 
-        // Convertir a rotación objetivo
         Quaternion rotObjetivo = Quaternion.LookRotation(dir);
         Vector3 angulos = rotObjetivo.eulerAngles;
 
-        // Normalizar para valores de -180 a 180
+        // 🔹 Normalizar ángulo X a -180 / 180
         float pitch = angulos.x;
         if (pitch > 180) pitch -= 360f;
 
         float yaw = angulos.y;
 
-        // Aplicar límites al pitch (eje X)
+        // 🔹 Evitar saltos cuando está demasiado cerca o justo debajo
+        if (dir.y > dir.magnitude * 0.9f)
+            pitch = rotX;  // No cambiar el pitch si el jugador está exactamente debajo
+
+        // 🔹 Aplicar límites sin bloquear mirar hacia abajo
         pitch = Mathf.Clamp(pitch, limiteVerticalMin, limiteVerticalMax);
 
-        // Rotación suave
-        rotX = Mathf.Lerp(rotX, pitch, Time.deltaTime * velocidadGiro);
-        rotY = Mathf.Lerp(rotY, yaw, Time.deltaTime * velocidadGiro);
+        rotX = Mathf.LerpAngle(rotX, pitch, Time.deltaTime * velocidadGiro);
+        rotY = Mathf.LerpAngle(rotY, yaw, Time.deltaTime * velocidadGiro);
 
         transform.rotation = Quaternion.Euler(rotX, rotY, 0);
     }

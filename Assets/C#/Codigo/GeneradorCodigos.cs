@@ -30,18 +30,18 @@ public class GeneradorCodigos : MonoBehaviour
     // Genera un conjunto de códigos, colocando uno verdadero y los demás falsos.
     public void GenerarCodigos()
     {
-        // Verifica que haya paneles asignados en el inspector.
         if (panelesCodigo == null || panelesCodigo.Length == 0)
         {
             Debug.LogError("No hay paneles asignados en el Inspector.");
             return;
         }
 
-        // Genera el código correcto y elige aleatoriamente en qué panel colocarlo.
         codigoCorrecto = GenerarCodigoAleatorio(cantidadCaracteres);
         indiceCorrecto = random.Next(0, panelesCodigo.Length);
 
-        // Asigna códigos a cada panel, colocando el verdadero solo en uno.
+        // 🔍 Mostrar en la consola cuál fue el código correcto y en qué panel está
+        Debug.Log($"[GeneradorCodigos] Código correcto: {codigoCorrecto} (Panel índice: {indiceCorrecto})");
+
         for (int i = 0; i < panelesCodigo.Length; i++)
         {
             if (i == indiceCorrecto)
@@ -50,7 +50,6 @@ public class GeneradorCodigos : MonoBehaviour
                 panelesCodigo[i].text = GenerarCodigoAleatorio(cantidadCaracteres);
         }
 
-        // Limpia el texto del resultado anterior.
         resultadoTexto.text = "";
     }
 

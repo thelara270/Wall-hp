@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: Fusible
-  icono: {fileID: 550285463, guid: 8d772d64e0184a24f91e8d5e6ee43d66, type: 3}
+  icono: {fileID: -1176406766, guid: 93d1fc0040a81b440969b57523f87a7e, type: 3}
   iconoInput: {fileID: 21300000, guid: dcd29602ca6ee6e408e5e310f913c964, type: 3}
   iconoRecoger: {fileID: 21300000, guid: dcf99c51449ec6f45877d5ff86ca793b, type: 3}
 --- !u!1 &6927507275913382683

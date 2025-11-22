@@ -5,7 +5,7 @@ using System.Collections;
 public class Regadera : ObjetoInteractuable
 {
     [Header("Capacidad de agua")]
-    public int aguaMaxima = 5;    // Máxima cantidad de agua que puede almacenar
+    public int aguaMaxima = 15;    // Máxima cantidad de agua que puede almacenar
     public int aguaActual = 0;    // Cantidad actual de agua
     public int aguaRecarga = 15;  // Cantidad de agua recargada al llenar
 
@@ -31,7 +31,7 @@ public class Regadera : ObjetoInteractuable
             return false;
         }
 
-        MovimientoJugador jugador = FindObjectOfType<MovimientoJugador>();
+        NuevoMovimiento jugador = FindObjectOfType<NuevoMovimiento>();
         if (jugador != null)
         {
             jugador.StartCoroutine(ProcesoRecarga(jugador));
@@ -41,13 +41,14 @@ public class Regadera : ObjetoInteractuable
     }
 
     // Corrutina que simula el proceso de recarga con retardo
-    private IEnumerator ProcesoRecarga(MovimientoJugador jugador)
+    private IEnumerator ProcesoRecarga(NuevoMovimiento jugador)
     {
         //UIInventario.Instance.MostrarMensaje("Recargando la regadera...");
 
         yield return new WaitForSeconds(tiempoRecarga);
 
-        aguaActual = Mathf.Min(aguaRecarga, aguaMaxima);
+        // Suma la recarga sin exceder el máximo
+        aguaActual = Mathf.Min(aguaActual + aguaRecarga, aguaMaxima);
         ActualizarBarraAgua();
 
         //UIInventario.Instance.MostrarMensaje("");

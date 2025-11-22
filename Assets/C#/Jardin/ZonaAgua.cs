@@ -13,6 +13,7 @@ public class ZonaAgua : MonoBehaviour
         {
             enRango = true;
             regadera = other.GetComponent<Regadera>();
+            Debug.Log("Regadera");
 
             // Muestra mensaje para recargar agua
             //UIInventario.Instance.MostrarMensaje("Presiona E para llenar la regadera");

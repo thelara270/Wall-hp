@@ -1723,9 +1723,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5057
-        y: 5176
-        width: 127
-        height: 229
+        y: 5141
+        width: 286
+        height: 281
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1735,69 +1735,6 @@ TextureImporter:
       bones: []
       spriteID: 31deed7d8d1317f418a805637045a997
       internalID: 709827197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mesa de trabajo 1_98
-      rect:
-        serializedVersion: 2
-        x: 5200
-        y: 5239
-        width: 39
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5939835870447144be79d0ae5f84750
-      internalID: -2017405458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mesa de trabajo 1_99
-      rect:
-        serializedVersion: 2
-        x: 5216
-        y: 5176
-        width: 71
-        height: 206
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0315b5af9711e384c8146d94016fcea7
-      internalID: 2001341365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mesa de trabajo 1_100
-      rect:
-        serializedVersion: 2
-        x: 5247
-        y: 5145
-        width: 79
-        height: 268
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a32a98d1278eb0f4c9e9039761f251d7
-      internalID: 1463100794
       vertices: []
       indices: 
       edges: []

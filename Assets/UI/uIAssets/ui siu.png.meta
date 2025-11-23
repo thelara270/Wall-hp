@@ -879,27 +879,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui siu_50
-      rect:
-        serializedVersion: 2
-        x: 3960
-        y: 1159
-        width: 355
-        height: 354
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 281457e27fcd6af4abddb1a44414ac1b
-      internalID: 775492307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ui siu_51
       rect:
         serializedVersion: 2
@@ -966,10 +945,10 @@ TextureImporter:
       name: ui siu_54
       rect:
         serializedVersion: 2
-        x: 4259
-        y: 1185
-        width: 912
-        height: 260
+        x: 3947
+        y: 1121
+        width: 1253
+        height: 405
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1055,7 +1034,7 @@ TextureImporter:
         width: 209
         height: 226
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -36,6 +36,7 @@ public class InventarioJugador : MonoBehaviour
             if (objetoCerca != null) // Recoger objeto cercano
             {
                 AgregarObjeto(objetoCerca);
+                AudioManager.instance?.SonidoTomarObjeto();
                 //UIInventario.Instance.MostrarMensaje("");
                 objetoCerca = null;
             }
@@ -167,6 +168,7 @@ public class InventarioJugador : MonoBehaviour
             Vector3 posicionSoltar = transform.position + transform.forward * 1f;
             objeto.Soltar(posicionSoltar);
             objeto.gameObject.SetActive(true);
+            AudioManager.instance?.SonidoTomarObjeto();
 
             //UIInventario.Instance.MostrarMensaje("Soltaste " + objeto.nombre);
 

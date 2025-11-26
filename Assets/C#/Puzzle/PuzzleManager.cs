@@ -38,6 +38,8 @@ public class PuzzleManager : MonoBehaviour
             puzzleCompletado = true;
             Debug.Log("¡Puzzle completado!");
 
+            AudioManager.instance?.SonidoRompecabezas();
+
             // Dispara el evento
             OnPuzzleCompletado?.Invoke();
         }

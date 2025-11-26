@@ -77,6 +77,11 @@ public class GeneradorCodigos : MonoBehaviour
             resultadoTexto.text = "Código correcto.";
             resultadoTexto.color = Color.green;
 
+            AudioManager.instance?.SonidoDigitarCodigo();
+
+            // Detiene el sonido de servidores por si estaba sonando
+            AudioManager.instance?.DetenerServidores();
+
             // Dispara el evento solo en el momento correcto.
             OnCodigoCorrecto?.Invoke();
         }
@@ -84,6 +89,7 @@ public class GeneradorCodigos : MonoBehaviour
         {
             resultadoTexto.text = "Código incorrecto.";
             resultadoTexto.color = Color.red;
+            AudioManager.instance?.SonidoServidores();
         }
     }
 

@@ -63,6 +63,9 @@ public class ZonaSiembra : MonoBehaviour
             crecimiento.DarZonaSiembra(this);
         }
 
+        AudioManager.instance.SonidoSembrar();
+
+
         // Elimina la bolsa del inventario del jugador
         jugador.UsarObjetoActivo();
 

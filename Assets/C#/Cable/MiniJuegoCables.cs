@@ -51,6 +51,8 @@ public class MinijuegoCables : MonoBehaviour
 
             estadoPanel = true;
 
+            AudioManager.instance?.SonidoPanelCarpetas();
+
             //Cerrar el minijuego y volver a la UI del jugador
             uiJugador.SetActive(true);
             uiMinijuego.SetActive(false);

@@ -25,6 +25,8 @@ public class CrecimientoArbol : MonoBehaviour
     [Header("Estado final")]
     public bool plantaLista = false;            // Indica si la planta ya alcanzó la etapa máxima.
 
+
+
     // Evento que notifica cuando el árbol está completamente crecido.
     public event Action<CrecimientoArbol> OnArbolListo;
 
@@ -80,6 +82,8 @@ public class CrecimientoArbol : MonoBehaviour
 
         // Suma la cantidad de agua recibida.
         agua += cantidad;
+        AudioManager.instance.SonidoRegarPlanta();
+
 
         // Si alcanzó el umbral de agua necesario, avanza una etapa.
         if (agua >= aguaPorEtapa)
@@ -93,6 +97,7 @@ public class CrecimientoArbol : MonoBehaviour
     // Incrementa la etapa de crecimiento y actualiza el animador.
     private void Crecer()
     {
+
         // Incrementa la etapa actual, sin pasar el máximo.
         etapaActual = Mathf.Min(etapaActual + 1, etapaMaxima);
 

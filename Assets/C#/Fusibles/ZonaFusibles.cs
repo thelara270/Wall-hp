@@ -28,6 +28,8 @@ public class ZonaFusibles : MonoBehaviour
 
                     //lo quitamos del inventario del jugador
                     inventario.UsarObjetoActivo();
+                    AudioManager.instance?.SonidoPanelElectrico();
+
 
                     // Notificar al DialogoManager que se colocó un fusible (esto cumple requisitos vinculados)
                     DialogoManager.instancia?.CumplirRequisito();

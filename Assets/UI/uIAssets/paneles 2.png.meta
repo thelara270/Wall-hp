@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8547636ed7534ae48b016b44e4604680
+guid: 7ec0f513036fc4d42afa2a849ee9a7c6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,30 +106,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aguaOxigeno_0
+      name: paneles 2_1
       rect:
         serializedVersion: 2
-        x: 1527
-        y: 3816
-        width: 1485
-        height: 1393
+        x: 7771
+        y: 4966
+        width: 2888
+        height: 3819
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a4c4ac05ceb1e043a896eb7fca2ec60
-      internalID: -1774469719
+      spriteID: d299f940a4f5f314eb94a7d77f13eb65
+      internalID: -771321934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aguaOxigeno_1
+      name: paneles 2_3
       rect:
         serializedVersion: 2
-        x: 3912
-        y: 5132
-        width: 3318
-        height: 448
+        x: 146
+        y: 4754
+        width: 2885
+        height: 3839
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aae3e72ea7cc5974e9d1b0a8d0dcc8a1
-      internalID: -1175568093
+      spriteID: 3c684434ce928e649bb87759d6357df2
+      internalID: 1199196627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aguaOxigeno_12
+      name: paneles 2_6
       rect:
         serializedVersion: 2
-        x: 2262
-        y: 2338
-        width: 429
-        height: 1049
+        x: 4157
+        y: 4902
+        width: 2994
+        height: 3831
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8857dc356f65af64380be4d685d395f2
-      internalID: -1937541223
+      spriteID: 0d14d85445930634c89c32b61f667962
+      internalID: -521410327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aguaOxigeno_13
+      name: paneles 2_10
       rect:
         serializedVersion: 2
-        x: 4279
-        y: 2170
-        width: 567
-        height: 892
+        x: 132
+        y: 870
+        width: 4281
+        height: 3466
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,41 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2dbf5a6a6c54a646aea57ce3e5fa518
-      internalID: -116950699
+      spriteID: 6f93bbb3cb25de6468fcf772bfeeebf9
+      internalID: -462607529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aguaOxigeno_2
+      name: paneles 2_12
       rect:
         serializedVersion: 2
-        x: 3912
-        y: 5132
-        width: 3318
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 980d5b6d4013cbf4981df935a74c909a
-      internalID: -602116002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aguaOxigeno_3
-      rect:
-        serializedVersion: 2
-        x: 3920
+        x: 5533
         y: 4254
-        width: 3327
-        height: 449
+        width: 3790
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +208,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dcc772ad030b6b45ba66a900c30f68a
-      internalID: -33653824
+      spriteID: ba96e835f46dba04bb9b3424d543031b
+      internalID: 2035071554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paneles 2_14
+      rect:
+        serializedVersion: 2
+        x: 4803
+        y: 272
+        width: 5716
+        height: 3675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5ef43e0d1b81342ac8aa8d21ca7842
+      internalID: -655153391
       vertices: []
       indices: 
       edges: []
@@ -251,7 +238,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 03454eb873d41cf4696bc510c49a254b
+    spriteID: b09140c65a9f15646a7b664b63b64577
     internalID: 0
     vertices: []
     indices: 
@@ -259,20 +246,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      aguaOxigeno_0: -1774469719
-      aguaOxigeno_1: -1175568093
-      aguaOxigeno_10: -414206867
-      aguaOxigeno_11: 1915196873
-      aguaOxigeno_12: -1937541223
-      aguaOxigeno_13: -116950699
-      aguaOxigeno_2: -602116002
-      aguaOxigeno_3: -33653824
-      aguaOxigeno_4: -620375620
-      aguaOxigeno_5: -547472274
-      aguaOxigeno_6: 190416334
-      aguaOxigeno_7: 1413466471
-      aguaOxigeno_8: -643650655
-      aguaOxigeno_9: -979897028
+      paneles 2_0: 726301786
+      paneles 2_1: -771321934
+      paneles 2_10: -462607529
+      paneles 2_11: -1449504911
+      paneles 2_12: 2035071554
+      paneles 2_13: 1531055451
+      paneles 2_14: -655153391
+      paneles 2_2: 1652986255
+      paneles 2_3: 1199196627
+      paneles 2_4: 1980737209
+      paneles 2_5: 143660074
+      paneles 2_6: -521410327
+      paneles 2_7: 1126592908
+      paneles 2_8: -1917164924
+      paneles 2_9: -474534269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,568 +110,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Volumen y vida_0
+      name: volumen y vida_0
       rect:
         serializedVersion: 2
-        x: 402
-        y: 4830
-        width: 1251
-        height: 1252
+        x: 403
+        y: 6186
+        width: 1262
+        height: 1287
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f233cf15f4e20f445b8e958fbd6dc2ac
-      internalID: -726555090
+      spriteID: c961a16fe62687a45a28a572e4042b9d
+      internalID: -942263811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volumen y vida_4
+      name: volumen y vida_4
       rect:
         serializedVersion: 2
-        x: 2275
-        y: 5560
-        width: 7451
-        height: 463
+        x: 2162
+        y: 6760
+        width: 7471
+        height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d9e90c6d8ad4f742bc539fe04ea7a11
-      internalID: 186441088
+      spriteID: fcb06fa59905add4bb384d50ff8ee030
+      internalID: -725007574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volumen y vida_5
+      name: volumen y vida_5
       rect:
         serializedVersion: 2
-        x: 10317
-        y: 5009
-        width: 113
-        height: 993
+        x: 10316
+        y: 6373
+        width: 118
+        height: 996
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9277c28ab8929a145b51402d9a8ac6a5
-      internalID: -507099202
+      spriteID: 2b4041b28cef4a646a37b013c7686602
+      internalID: 1258160944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volumen y vida_6
+      name: volumen y vida_6
       rect:
         serializedVersion: 2
-        x: 2312
-        y: 4891
-        width: 7449
-        height: 458
+        x: 495
+        y: 3080
+        width: 9254
+        height: 2676
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9c6adcb82338a844989a312c5229a6e
-      internalID: 558934185
+      spriteID: dc30b4a6ddd4fdd4488308cb81982da7
+      internalID: -889986120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volumen y vida_7
+      name: volumen y vida_11
       rect:
         serializedVersion: 2
-        x: 499
-        y: 1718
-        width: 2692
-        height: 2671
+        x: 9852
+        y: 2103
+        width: 1473
+        height: 1516
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7f6c4eabcd3bb0439570b82c7eaed34
-      internalID: 187053678
+      spriteID: 1e16a182c1a15394eb80c93532f29b34
+      internalID: -1283491964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volumen y vida_8
+      name: volumen y vida_15
       rect:
         serializedVersion: 2
-        x: 2792
-        y: 1930
-        width: 6932
-        height: 1914
+        x: 3596
+        y: 1794
+        width: 5332
+        height: 459
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38fbe1902f1ea0341b213722af629a3e
-      internalID: 1062271130
+      spriteID: 6bb9d16e51917fc4292b92175d92b318
+      internalID: 434210636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volumen y vida_9
+      name: volumen y vida_7
       rect:
         serializedVersion: 2
-        x: 3730
-        y: 429
-        width: 189
-        height: 458
+        x: 640
+        y: 788
+        width: 1916
+        height: 1547
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf54a8241176f1469f7e261e11d5b9f
-      internalID: 423824519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_10
-      rect:
-        serializedVersion: 2
-        x: 3968
-        y: 429
-        width: 188
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 518b564c75e83cb4aa3940f06d084926
-      internalID: -260556670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_11
-      rect:
-        serializedVersion: 2
-        x: 4205
-        y: 429
-        width: 189
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 311ac6b438781a64db16f7e171be3acd
-      internalID: -1139670638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_12
-      rect:
-        serializedVersion: 2
-        x: 4445
-        y: 429
-        width: 192
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d64c284387e63464393274ab127b5577
-      internalID: -1254073865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_13
-      rect:
-        serializedVersion: 2
-        x: 4685
-        y: 429
-        width: 194
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e0b3631482151247aadae3ffb96be90
-      internalID: -127675531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_14
-      rect:
-        serializedVersion: 2
-        x: 4923
-        y: 429
-        width: 193
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c69382d938e20db49ae48e6768b85e65
-      internalID: 1138027156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_15
-      rect:
-        serializedVersion: 2
-        x: 5171
-        y: 429
-        width: 188
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 816ec082daf5d734daeb55f6a6a85426
-      internalID: -174999834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_16
-      rect:
-        serializedVersion: 2
-        x: 5409
-        y: 429
-        width: 193
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0a986e5f6ed67147af656496d6a4ce1
-      internalID: -280430967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_17
-      rect:
-        serializedVersion: 2
-        x: 5651
-        y: 429
-        width: 193
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 827108bc96b947445b9ddc63c2a625cf
-      internalID: -2106631724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_18
-      rect:
-        serializedVersion: 2
-        x: 5899
-        y: 429
-        width: 189
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6434cb2f9ff1b2d488b5d6b75021eee0
-      internalID: 1224414626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_19
-      rect:
-        serializedVersion: 2
-        x: 6147
-        y: 429
-        width: 189
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65e9258f64f14574fa48b1ccc067eed2
-      internalID: 1355269415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_20
-      rect:
-        serializedVersion: 2
-        x: 6390
-        y: 429
-        width: 194
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25d26218ef94d5c47a47074a3b3ecf25
-      internalID: -1626757836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_21
-      rect:
-        serializedVersion: 2
-        x: 6638
-        y: 429
-        width: 189
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7136c702b6714d845bbc2443bbceeb3b
-      internalID: -1208170806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_22
-      rect:
-        serializedVersion: 2
-        x: 6881
-        y: 429
-        width: 189
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6da48a94bc426f649833a4dbe6f783ac
-      internalID: -1050244010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_23
-      rect:
-        serializedVersion: 2
-        x: 7129
-        y: 429
-        width: 189
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6bc8fdc4ad07ce41a17f12d0f2de929
-      internalID: -1564454817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_24
-      rect:
-        serializedVersion: 2
-        x: 7366
-        y: 429
-        width: 194
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 817640ae493d1464aa99d19d470a7429
-      internalID: -480257430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_25
-      rect:
-        serializedVersion: 2
-        x: 7614
-        y: 429
-        width: 189
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4249922c3afbadd46a6df9b87292e54a
-      internalID: -1017045266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_26
-      rect:
-        serializedVersion: 2
-        x: 7863
-        y: 429
-        width: 188
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cb1b7875ab3edc4eb21a8c62b96311e
-      internalID: 1451011061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_27
-      rect:
-        serializedVersion: 2
-        x: 8106
-        y: 429
-        width: 193
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3afe4c8667752954ea87947f0780644b
-      internalID: 1217571143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_28
-      rect:
-        serializedVersion: 2
-        x: 8359
-        y: 429
-        width: 189
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8c39317f546b834aa841455f014da2e
-      internalID: -864687107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volumen y vida_29
-      rect:
-        serializedVersion: 2
-        x: 8596
-        y: 429
-        width: 194
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0ed808d5eae08d409ebb70b15eb8ca5
-      internalID: -254410498
+      spriteID: 205c2ac4124017344aece7eeec47d9d4
+      internalID: -2116906927
       vertices: []
       indices: 
       edges: []
@@ -679,7 +259,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5a92133f60f53c54e82f5650d62cc23d
+    spriteID: 34b11c1b6fa421e4391e179702c40511
     internalID: 0
     vertices: []
     indices: 
@@ -687,36 +267,44 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Volumen y vida_0: -726555090
-      Volumen y vida_1: -174430355
-      Volumen y vida_10: -260556670
-      Volumen y vida_11: -1139670638
-      Volumen y vida_12: -1254073865
-      Volumen y vida_13: -127675531
-      Volumen y vida_14: 1138027156
-      Volumen y vida_15: -174999834
-      Volumen y vida_16: -280430967
-      Volumen y vida_17: -2106631724
-      Volumen y vida_18: 1224414626
-      Volumen y vida_19: 1355269415
-      Volumen y vida_2: 2040708888
-      Volumen y vida_20: -1626757836
-      Volumen y vida_21: -1208170806
-      Volumen y vida_22: -1050244010
-      Volumen y vida_23: -1564454817
-      Volumen y vida_24: -480257430
-      Volumen y vida_25: -1017045266
-      Volumen y vida_26: 1451011061
-      Volumen y vida_27: 1217571143
-      Volumen y vida_28: -864687107
-      Volumen y vida_29: -254410498
-      Volumen y vida_3: -1899269731
-      Volumen y vida_4: 186441088
-      Volumen y vida_5: -507099202
-      Volumen y vida_6: 558934185
-      Volumen y vida_7: 187053678
-      Volumen y vida_8: 1062271130
-      Volumen y vida_9: 423824519
+      volumen y vida_0: -942263811
+      volumen y vida_1: 2082559992
+      volumen y vida_10: 1334097099
+      volumen y vida_11: -1283491964
+      volumen y vida_12: -548466143
+      volumen y vida_13: 618403787
+      volumen y vida_14: 1145542457
+      volumen y vida_15: 434210636
+      volumen y vida_16: -793922596
+      volumen y vida_17: 1042583383
+      volumen y vida_18: 655262120
+      volumen y vida_19: -1745271740
+      volumen y vida_2: -1499678254
+      volumen y vida_20: 1244225106
+      volumen y vida_21: -1830604607
+      volumen y vida_22: 1544724275
+      volumen y vida_23: 1988683974
+      volumen y vida_24: 1594545332
+      volumen y vida_25: -293480495
+      volumen y vida_26: -424500711
+      volumen y vida_27: -1082265492
+      volumen y vida_28: 51967506
+      volumen y vida_29: -818338550
+      volumen y vida_3: 773750057
+      volumen y vida_30: 967757342
+      volumen y vida_31: 2063651450
+      volumen y vida_32: -989815863
+      volumen y vida_33: -1271203918
+      volumen y vida_34: 1773818369
+      volumen y vida_35: 686308150
+      volumen y vida_36: -217473993
+      volumen y vida_37: 1061501861
+      volumen y vida_4: -725007574
+      volumen y vida_5: 1258160944
+      volumen y vida_6: -889986120
+      volumen y vida_7: -2116906927
+      volumen y vida_8: 2003498953
+      volumen y vida_9: 1897466156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

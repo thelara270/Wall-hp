@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: Bolsa Semillas
-  icono: {fileID: 1024424430, guid: 93d1fc0040a81b440969b57523f87a7e, type: 3}
+  icono: {fileID: 1256429535, guid: 8e7f6af65eaa51b4ca483149e8a4b05c, type: 3}
   iconoInput: {fileID: 21300000, guid: 91ef1a009c6301f47be87d4fd4d074c1, type: 3}
   iconoRecoger: {fileID: 21300000, guid: dcf99c51449ec6f45877d5ff86ca793b, type: 3}
   prefabPlanta: {fileID: 8338360897568701305, guid: ea8190004597eb545bdbb796726ab1e4, type: 3}

@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: Regadera
-  icono: {fileID: -1166764850, guid: 93d1fc0040a81b440969b57523f87a7e, type: 3}
+  icono: {fileID: -463930586, guid: 8e7f6af65eaa51b4ca483149e8a4b05c, type: 3}
   iconoInput: {fileID: 21300000, guid: 939217118e51a98418edac3c9a294d94, type: 3}
   iconoRecoger: {fileID: 21300000, guid: dcf99c51449ec6f45877d5ff86ca793b, type: 3}
   aguaMaxima: 15
@@ -58,6 +58,7 @@ MonoBehaviour:
   aguaRecarga: 15
   barra: {fileID: 0}
   tiempoRecarga: 2
+  intervaloRecarga: 1
 --- !u!65 &8248427105287058852
 BoxCollider:
   m_ObjectHideFlags: 0

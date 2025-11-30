@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 368a307062a38b14b9a66c2f40f4fcec
+guid: 76a6c9717cf43ec4f9d5db932a372e4a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SIUUU
+    second: {fileID: 2800000, guid: dd52c81ca2a143b4b82c3b32ade65ba8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TEXTURASILLACAFETERIA
+    second: {fileID: 2800000, guid: abfc8da5559ba0b45bd904aec2fed5fc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: WhatsApp Image 2025-11-12 at 11.19.31 AM
+    second: {fileID: 2800000, guid: 9e8e45c5f195612469a3778b64dafffe, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

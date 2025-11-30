@@ -31,6 +31,7 @@ public class DialogoManager : MonoBehaviour
             DebeSaltar,
             DebeAgarrarObjeto,
             DebeColocarFusible,
+            DebeCumplirFusible,
             DebeRepararCables
         }
 

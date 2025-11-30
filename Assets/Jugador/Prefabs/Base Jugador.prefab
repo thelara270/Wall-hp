@@ -84,15 +84,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 853d2e23adf455f44aa0d9cc375bae17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -14.61511
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 853d2e23adf455f44aa0d9cc375bae17, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.3000007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 853d2e23adf455f44aa0d9cc375bae17, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.460972
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 853d2e23adf455f44aa0d9cc375bae17, type: 3}
       propertyPath: m_LocalRotation.w
@@ -284,6 +284,8 @@ MonoBehaviour:
   capaSuelo:
     serializedVersion: 2
     m_Bits: 8
+  gravedadExtra: 20
+  gravedadCaida: 30
 --- !u!114 &6039368057954735208
 MonoBehaviour:
   m_ObjectHideFlags: 0

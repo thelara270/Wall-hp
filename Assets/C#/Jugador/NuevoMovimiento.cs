@@ -17,6 +17,10 @@ public class NuevoMovimiento : MonoBehaviour
     public Vector3 tamanoDeteccion = new Vector3(0.5f, 0.1f, 0.5f);
     public LayerMask capaSuelo;
 
+    [Header("Gravedad Mejorada")]
+    public float gravedadExtra = 20f;
+    public float gravedadCaida = 30f;
+
     private Rigidbody rb;
     private Animator animator;
 
@@ -109,13 +113,19 @@ public class NuevoMovimiento : MonoBehaviour
     {
         if (!EstaEnElSuelo())
         {
+            // SUBIENDO
             if (rb.velocity.y > 0.1f)
             {
+                rb.AddForce(Vector3.down * gravedadExtra, ForceMode.Acceleration);
+
                 if (animator) animator.SetBool("Saltando", true);
                 if (animator) animator.SetBool("Cayendo", false);
             }
+            // CAYENDO
             else if (rb.velocity.y < -0.1f)
             {
+                rb.AddForce(Vector3.down * gravedadCaida, ForceMode.Acceleration);
+
                 if (animator) animator.SetBool("Saltando", false);
                 if (animator) animator.SetBool("Cayendo", true);
             }

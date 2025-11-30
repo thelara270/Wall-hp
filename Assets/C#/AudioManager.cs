@@ -27,8 +27,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip rompecabezasColocar;
 
     [Header("UI Effects")]
-    public AudioClip uiHover;   // 🔊 nuevo
-    public AudioClip uiClick;   // 🔊 nuevo
+    public AudioClip uiHover;   
+    public AudioClip uiClick;  
 
     float musicVolume = 1f;
     float sfxVolume = 1f;

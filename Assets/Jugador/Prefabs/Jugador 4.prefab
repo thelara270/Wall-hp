@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2334755228155090397
+--- !u!1 &44424744516040575
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4957789940244346381}
-  - component: {fileID: 8506058625068425505}
-  - component: {fileID: 711866018591503856}
-  - component: {fileID: 7442860964706545596}
-  - component: {fileID: 641212277573194034}
+  - component: {fileID: 96525507332264838}
+  - component: {fileID: 7934976141369628209}
+  - component: {fileID: 7602654363915203208}
+  - component: {fileID: 2030586936992984421}
+  - component: {fileID: 8112941696491270293}
   m_Layer: 0
-  m_Name: Camera (1)
+  m_Name: Camera 3th
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4957789940244346381
+--- !u!4 &96525507332264838
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334755228155090397}
+  m_GameObject: {fileID: 44424744516040575}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.35, z: 0}
@@ -35,13 +35,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7566390567744520611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &8506058625068425505
+--- !u!20 &7934976141369628209
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334755228155090397}
+  m_GameObject: {fileID: 44424744516040575}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -86,21 +86,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &711866018591503856
+--- !u!81 &7602654363915203208
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334755228155090397}
+  m_GameObject: {fileID: 44424744516040575}
   m_Enabled: 1
---- !u!114 &7442860964706545596
+--- !u!114 &2030586936992984421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334755228155090397}
+  m_GameObject: {fileID: 44424744516040575}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
@@ -138,13 +138,13 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &641212277573194034
+--- !u!114 &8112941696491270293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334755228155090397}
+  m_GameObject: {fileID: 44424744516040575}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abc5c14fbcc488243b8c6c8f77604d8a, type: 3}
@@ -154,11 +154,25 @@ MonoBehaviour:
   distancia: 7
   distanciaMin: 1
   distanciaMax: 4
+  distanciaAIM: 2
+  velocidadZoom: 10
   altura: 4
   sensibilidadX: 100
   sensibilidadY: 100
   minY: -40
   maxY: 60
+  rangoAutoAim: 30
+  capaEnemigos:
+    serializedVersion: 2
+    m_Bits: 512
+  enemigoMasCercano: {fileID: 0}
+  miraUIPrefab: {fileID: 7892399909149880990, guid: 814d447cc03a993428e911e37311cf2a, type: 3}
+  canvasJugador: {fileID: 0}
+  apuntando: 0
+  offsetNormal: {x: 0, y: 0, z: 0}
+  offsetApuntar: {x: 1.57, y: 0.15, z: 0}
+  distanciaApuntar: 1.36
+  suavidadCambioModo: 10
   suavidadMovimiento: 10
   suavidadRotacion: 15
   capasColision:
@@ -194,7 +208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1535104411291899687}
-  - {fileID: 4957789940244346381}
+  - {fileID: 96525507332264838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &574522305496961892

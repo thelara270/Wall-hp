@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CamaraTercera : MonoBehaviour
 {
@@ -32,7 +33,9 @@ public class CamaraTercera : MonoBehaviour
     public Transform enemigoMasCercano;    // 🔥 Nuevo
 
     [Header("UI")]
-    public GameObject miraUI;              // 🔥 Nuevo (Canvas)
+    public GameObject miraUIPrefab;   // el prefab
+    private GameObject miraUI;        
+    public Canvas canvasJugador;
 
     [Header("Apuntar")]
     public bool apuntando = false;
@@ -59,6 +62,30 @@ public class CamaraTercera : MonoBehaviour
         Cursor.visible = false;
 
         distanciaActual = distancia;
+
+        // ---------------------------------------
+        // 🔥 CREAR CANVAS SI NO EXISTE
+        // ---------------------------------------
+        if (canvasJugador == null)
+        {
+            GameObject nuevoCanvas = new GameObject("CanvasMira");
+            canvasJugador = nuevoCanvas.AddComponent<Canvas>();
+            canvasJugador.renderMode = RenderMode.ScreenSpaceOverlay;
+
+            nuevoCanvas.AddComponent<CanvasScaler>();
+            nuevoCanvas.AddComponent<GraphicRaycaster>();
+
+            DontDestroyOnLoad(nuevoCanvas);
+        }
+
+        // ---------------------------------------
+        // 🔥 INSTANCIAR LA MIRA DENTRO DEL CANVAS
+        // ---------------------------------------
+        if (miraUIPrefab != null)
+        {
+            miraUI = Instantiate(miraUIPrefab, canvasJugador.transform);
+            miraUI.SetActive(false);
+        }
     }
 
     void LateUpdate()
@@ -77,6 +104,18 @@ public class CamaraTercera : MonoBehaviour
             apuntando = false;
 
         RotarCamara();
+
+        if (apuntando && objetivo != null)
+        {
+            Vector3 forward = transform.forward;
+            forward.y = 0; // evitar inclinación rara
+            objetivo.rotation = Quaternion.Lerp(
+                objetivo.rotation,
+                Quaternion.LookRotation(forward),
+                Time.deltaTime * 10f
+            );
+        }
+
         CalcularDistanciaConColision();
         MoverCamara();
 

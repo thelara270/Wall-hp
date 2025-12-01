@@ -106,11 +106,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hptaui_0
+      name: Semillas
       rect:
         serializedVersion: 2
         x: 194
@@ -118,7 +131,7 @@ TextureImporter:
         width: 4453
         height: 1463
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hptaui_1
+      name: Arma
       rect:
         serializedVersion: 2
         x: 194
@@ -139,7 +152,7 @@ TextureImporter:
         width: 4453
         height: 1462
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hptaui_2
+      name: Regadera
       rect:
         serializedVersion: 2
         x: 194
@@ -160,7 +173,7 @@ TextureImporter:
         width: 4453
         height: 2166
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hptaui_3
+      name: Linterna
       rect:
         serializedVersion: 2
         x: 194
@@ -181,7 +194,7 @@ TextureImporter:
         width: 4453
         height: 1463
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hptaui_4
+      name: Recoger
       rect:
         serializedVersion: 2
         x: 194
@@ -202,7 +215,7 @@ TextureImporter:
         width: 4453
         height: 840
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hptaui_5
+      name: Fusible
       rect:
         serializedVersion: 2
         x: 194
@@ -223,7 +236,7 @@ TextureImporter:
         width: 4453
         height: 1470
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hptaui_6
+      name: Panel
       rect:
         serializedVersion: 2
         x: 207
@@ -244,7 +257,7 @@ TextureImporter:
         width: 4440
         height: 846
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hptaui_7
+      name: Codigo
       rect:
         serializedVersion: 2
         x: 207
@@ -265,7 +278,7 @@ TextureImporter:
         width: 4440
         height: 846
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hptaui_8
+      name: fuente de poder
       rect:
         serializedVersion: 2
         x: 207
@@ -286,7 +299,7 @@ TextureImporter:
         width: 4440
         height: 840
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,6 +307,27 @@ TextureImporter:
       bones: []
       spriteID: a0e649a769a17b244b46f194faba585c
       internalID: -1550097057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poner fusible
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 3709
+        width: 4439
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26913109c9206564fa7e24250a0ec155
+      internalID: 427757485
       vertices: []
       indices: 
       edges: []
@@ -309,15 +343,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hptaui_0: -230574155
-      hptaui_1: 20761156
-      hptaui_2: 225382343
-      hptaui_3: -1765440219
-      hptaui_4: 1409921089
-      hptaui_5: -391477190
-      hptaui_6: 805156006
-      hptaui_7: -1664073592
-      hptaui_8: -1550097057
+      Arma: 20761156
+      Codigo: -1664073592
+      Fusible: -391477190
+      Linterna: -1765440219
+      Panel: 805156006
+      Poner fusible: 427757485
+      Recoger: 1409921089
+      Regadera: 225382343
+      Semillas: -230574155
+      fuente de poder: -1550097057
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

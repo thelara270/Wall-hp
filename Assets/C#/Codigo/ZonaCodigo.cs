@@ -1,14 +1,17 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ZonaCodigo : MonoBehaviour
 {
-    public GameObject panel; //Referencia al minijuego
+    public GameObject panel;
     public GameObject uiJugador;
 
-    //Detecta si el jugador esta en rango
+    public float tiempoCierreAutomatico = 2f;
+    [HideInInspector] public bool bloqueoSalida = false;
+
     private bool enRango;
+    private bool ignoreNextE = false;
 
     private void Update()
     {
@@ -18,13 +21,14 @@ public class ZonaCodigo : MonoBehaviour
 
     public void ActivarPanel()
     {
-        //Si el jugador esta en rango y presiona la tecla E 
-        if (enRango && Input.GetKeyDown(KeyCode.E))
+        if (enRango && Input.GetKeyDown(KeyCode.E) && !panel.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            //Oculta la UI del jugador y activa la del minijuego
+            bloqueoSalida = false;
+            ignoreNextE = true;
+
             uiJugador.SetActive(false);
             panel.SetActive(true);
         }
@@ -32,15 +36,27 @@ public class ZonaCodigo : MonoBehaviour
 
     public void DesactivarPanel()
     {
-        if (panel != null && Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+        if (!panel.activeSelf) return;
 
-            //Oculta la UI del jugador y activa la del minijuego
-            uiJugador.SetActive(true);
-            panel.SetActive(false);
+        if (ignoreNextE)
+        {
+            ignoreNextE = false;
+            return;
         }
+
+        if (bloqueoSalida) return;
+
+        if (Input.GetKeyDown(KeyCode.E))
+            CerrarPanel();
+    }
+
+    public void CerrarPanel()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        uiJugador.SetActive(true);
+        panel.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -55,8 +71,6 @@ public class ZonaCodigo : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
             enRango = false;
-        }
     }
 }

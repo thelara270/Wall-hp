@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static DialogoManager;
 
 public class NuevoMovimiento : MonoBehaviour
 {
@@ -31,9 +32,6 @@ public class NuevoMovimiento : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 
     void Update()
@@ -78,7 +76,7 @@ public class NuevoMovimiento : MonoBehaviour
         if (!movimientoNotificado && direccion.magnitude > 0.1f)
         {
             movimientoNotificado = true;
-            DialogoManager.instancia?.CumplirRequisito();
+            DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeMoverse);
         }
     }
 
@@ -104,7 +102,7 @@ public class NuevoMovimiento : MonoBehaviour
             if (!saltoNotificado)
             {
                 saltoNotificado = true;
-                DialogoManager.instancia?.CumplirRequisito();
+                //DialogoManager.instancia?.CumplirRequisito();
             }
         }
     }
@@ -136,33 +134,6 @@ public class NuevoMovimiento : MonoBehaviour
             if (animator) animator.SetBool("Cayendo", false);
         }
     }
-
-    // 🔊 -----------------------------------------
-    //        SONIDO DE CAMINAR / CORRER
-    // ---------------------------------------------
-
-    //void SonidosMovimiento()
-    //{
-    //    float velXZ = new Vector2(rb.velocity.x, rb.velocity.z).magnitude;
-
-    //    bool estaMoviendose = velXZ > 0.2f;
-    //    bool estaEnSuelo = EstaEnElSuelo();
-
-    //    if (estaMoviendose && estaEnSuelo)
-    //    {
-    //        // Si corre, subimos el pitch
-    //        if (Input.GetKey(KeyCode.LeftShift))
-    //            AudioManager.instance.loopSource.pitch = 1.3f;
-    //        else
-    //            AudioManager.instance.loopSource.pitch = 1f;
-
-    //        AudioManager.instance.SonidoCaminar(true);
-    //    }
-    //    else
-    //    {
-    //        AudioManager.instance.SonidoCaminar(false);
-    //    }
-    //}
 
     void OnDrawGizmosSelected()
     {

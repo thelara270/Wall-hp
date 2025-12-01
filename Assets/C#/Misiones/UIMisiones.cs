@@ -1,4 +1,5 @@
 using UnityEngine;
+using static DialogoManager;
 
 public class UIMisiones : MonoBehaviour
 {
@@ -47,6 +48,8 @@ public class UIMisiones : MonoBehaviour
         juegoPausado = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeAbrirMisiones);
+
 
         // Actualiza todos los botones de misión al abrir el panel
         foreach (var boton in botonesMisiones)

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static DialogoManager;
 
 public class MisionSala1 : MisionBase
 {
@@ -24,7 +25,10 @@ public class MisionSala1 : MisionBase
     {
         // Comprueba si todas las tareas necesarias están completas
         if (fusiblesColocados && generadorReparado && panelElectricoReparado)
+        {
             CompletarMision();
+            DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeCumplirMision1);
+        }
     }
 
     // Marca los fusibles como colocados

@@ -70,8 +70,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Fusible
   icono: {fileID: -1256900776, guid: 8e7f6af65eaa51b4ca483149e8a4b05c, type: 3}
-  iconoInput: {fileID: 21300000, guid: dcd29602ca6ee6e408e5e310f913c964, type: 3}
-  iconoRecoger: {fileID: 21300000, guid: dcf99c51449ec6f45877d5ff86ca793b, type: 3}
+  iconoInput: {fileID: -391477190, guid: 66c68b9c22ba6e4498a7336b51c2b3a2, type: 3}
+  iconoRecoger: {fileID: 1409921089, guid: 66c68b9c22ba6e4498a7336b51c2b3a2, type: 3}
 --- !u!1 &6927507275913382683
 GameObject:
   m_ObjectHideFlags: 0

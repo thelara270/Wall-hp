@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static DialogoManager;
 
 public class ObjetoInteractuable : MonoBehaviour
 {
@@ -64,7 +65,8 @@ public class ObjetoInteractuable : MonoBehaviour
             UIInventario.Instance.MostrarIconoRecoger(null, false);
 
         // Notificar al DialogoManager que se recogió un objeto (útil si un diálogo espera la acción)
-        DialogoManager.instancia?.CumplirRequisito();
+        DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeAgarrarObjeto);
+
 
         // Opcional: desactivar el objeto en la escena si lo recoges en inventario
         // gameObject.SetActive(false);

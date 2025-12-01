@@ -6,36 +6,32 @@ using UnityEngine.Events;
 
 public class DialogoManager : MonoBehaviour
 {
-    public static DialogoManager instancia; // acceso global rápido
+    public static DialogoManager instancia;
 
     [Header("UI")]
     public GameObject panelDialogo;
     public TextMeshProUGUI textoDialogo;
 
-    // -----------------------------
-    //   SISTEMA DE FRASES NUEVO
-    // -----------------------------
     [System.Serializable]
     public class FraseDialogo
     {
         [TextArea]
         public string texto;
 
-        [Tooltip("Si está activado, agrega automáticamente 'Presiona Enter para continuar.'")]
         public bool mostrarContinuar = true;
 
         public enum Requisito
         {
             Ninguno,
             DebeMoverse,
-            DebeSaltar,
             DebeAgarrarObjeto,
             DebeColocarFusible,
             DebeCumplirFusible,
-            DebeRepararCables
+            DebeRepararCables,
+            DebeAbrirMisiones,
+            DebeCumplirMision1,
         }
 
-        [Tooltip("Requisito que debe cumplirse antes de permitir avanzar desde esta frase.")]
         public Requisito requisito = Requisito.Ninguno;
     }
 
@@ -43,21 +39,20 @@ public class DialogoManager : MonoBehaviour
     public FraseDialogo[] frases;
     private int indice = 0;
 
-    // -----------------------------
     [Header("Velocidad de texto")]
     public float velocidadEscritura = 0.05f;
     private Coroutine escribiendo;
     private bool textoCompleto = false;
 
-    // Control de requisito actual
     private bool requisitoCumplido = false;
     private FraseDialogo.Requisito requisitoActual = FraseDialogo.Requisito.Ninguno;
 
-    // -----------------------------
+    private Dictionary<FraseDialogo.Requisito, bool> requisitosPrevios =
+        new Dictionary<FraseDialogo.Requisito, bool>();
+
     [System.Serializable]
     public class EventoDialogo
     {
-        [Tooltip("Índice del diálogo que activará este evento.")]
         public int indice;
         public UnityEvent evento;
     }
@@ -67,7 +62,6 @@ public class DialogoManager : MonoBehaviour
 
     void Awake()
     {
-        // Singleton simple
         if (instancia == null) instancia = this;
         else if (instancia != this) Destroy(gameObject);
     }
@@ -86,23 +80,17 @@ public class DialogoManager : MonoBehaviour
         {
             if (!textoCompleto)
             {
-                // Completar el texto inmediatamente
                 CompletarTextoActual();
             }
             else
             {
-                // Si hay un requisito para esta frase y no se cumplió → no permitir avanzar
                 if (requisitoActual != FraseDialogo.Requisito.Ninguno && !requisitoCumplido)
                 {
-                    // Opcional: reproducir un sonido o mostrar un UI que indique "requisito no cumplido"
-                    Debug.Log("⛔ Requisito no cumplido: " + requisitoActual);
+                    Debug.Log("Requisito no cumplido: " + requisitoActual);
                     return;
                 }
 
-                // reset del flag para la siguiente frase (se volverá a asignar en MostrarSiguienteFrase)
                 requisitoCumplido = false;
-
-                // Pasar al siguiente diálogo
                 MostrarSiguienteFrase();
             }
         }
@@ -122,17 +110,29 @@ public class DialogoManager : MonoBehaviour
             if (escribiendo != null)
                 StopCoroutine(escribiendo);
 
-            // Obtener la frase actual
             FraseDialogo fraseObj = frases[indice];
 
-            // Registrar requisito actual y por defecto marcar cumplido si no requiere nada
             requisitoActual = fraseObj.requisito;
-            requisitoCumplido = (requisitoActual == FraseDialogo.Requisito.Ninguno);
 
-            // Reemplazar nombre del jugador
-            string fraseProcesada = fraseObj.texto.Replace("{NOMBRE}", DatosJugador.instancia != null ? DatosJugador.instancia.nombreJugador : "JUGADOR");
+            if (requisitoActual == FraseDialogo.Requisito.Ninguno)
+            {
+                requisitoCumplido = true;
+            }
+            else if (requisitosPrevios.ContainsKey(requisitoActual))
+            {
+                requisitoCumplido = true;
+                Debug.Log("Requisito ya se había cumplido antes: " + requisitoActual);
+            }
+            else
+            {
+                requisitoCumplido = false;
+            }
 
-            // Agregar el texto de "Enter para continuar" si está activado
+            string fraseProcesada = fraseObj.texto.Replace(
+                "{NOMBRE}",
+                DatosJugador.instancia != null ? DatosJugador.instancia.nombreJugador : "JUGADOR"
+            );
+
             if (fraseObj.mostrarContinuar)
                 fraseProcesada += "\n\nPresiona Enter para continuar.";
 
@@ -158,7 +158,7 @@ public class DialogoManager : MonoBehaviour
         }
 
         textoCompleto = true;
-        indice++; // Avanza automáticamente al final de la escritura (índice apunta al siguiente)
+        indice++;
     }
 
     void CompletarTextoActual()
@@ -166,13 +166,12 @@ public class DialogoManager : MonoBehaviour
         if (escribiendo != null)
             StopCoroutine(escribiendo);
 
-        // Nota: cuando se completó, el índice apunta al siguiente (porque EscribirTexto incrementa al terminar).
-        // Para obtener la frase actual mostramos el elemento índice - 1 (con clamp para seguridad).
         FraseDialogo fraseObj = frases[Mathf.Clamp(indice, 0, frases.Length - 1)];
-        // Si texCompleto==false y EscribirTexto no alcanzó a incrementar, usamos Clamp(indice,0,len-1).
-        // Esta línea es compatible con la estructura actual.
 
-        string fraseProcesada = fraseObj.texto.Replace("{NOMBRE}", DatosJugador.instancia != null ? DatosJugador.instancia.nombreJugador : "JUGADOR");
+        string fraseProcesada = fraseObj.texto.Replace(
+            "{NOMBRE}",
+            DatosJugador.instancia != null ? DatosJugador.instancia.nombreJugador : "JUGADOR"
+        );
 
         if (fraseObj.mostrarContinuar)
             fraseProcesada += "\n\nPresiona Enter para continuar.";
@@ -183,11 +182,19 @@ public class DialogoManager : MonoBehaviour
         indice++;
     }
 
-    // Llamar desde otros scripts para marcar el requisito como cumplido
-    public void CumplirRequisito()
+    public void CumplirRequisito(FraseDialogo.Requisito tipo)
     {
-        requisitoCumplido = true;
-        Debug.Log("✅ Requisito cumplido: " + requisitoActual);
+        requisitosPrevios[tipo] = true;
+
+        if (tipo == requisitoActual)
+        {
+            requisitoCumplido = true;
+            Debug.Log("Requisito cumplido en el momento correcto: " + tipo);
+        }
+        else
+        {
+            Debug.Log("Requisito registrado por adelantado: " + tipo);
+        }
     }
 
     void EjecutarEventosDialogo(int indiceActual)
@@ -207,6 +214,6 @@ public class DialogoManager : MonoBehaviour
             StopCoroutine(escribiendo);
 
         panelDialogo.SetActive(false);
-        Debug.Log("📖 Diálogo terminado");
+        Debug.Log("Dialogo terminado");
     }
 }

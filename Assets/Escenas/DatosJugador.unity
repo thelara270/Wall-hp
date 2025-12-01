@@ -1857,6 +1857,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567682397}
     - target: {fileID: 3422457301711475216, guid: 3c21f8f56eec1a946bb966c54e84d49e, type: 3}
+      propertyPath: m_CharacterLimit
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422457301711475216, guid: 3c21f8f56eec1a946bb966c54e84d49e, type: 3}
       propertyPath: m_GlobalFontAsset
       value: 
       objectReference: {fileID: 11400000, guid: fe15da94248a32b489cd69f3e6ca71c8, type: 2}
@@ -2548,6 +2552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85cab94cd27d6f4e9bb8b726f702f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelPausa: {fileID: 0}
+  canvasHUD: {fileID: 0}
 --- !u!1 &1952471922
 GameObject:
   m_ObjectHideFlags: 0

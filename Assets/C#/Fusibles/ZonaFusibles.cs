@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static DialogoManager;
 
 public class ZonaFusibles : MonoBehaviour
 {
@@ -32,7 +33,8 @@ public class ZonaFusibles : MonoBehaviour
 
 
                     // Notificar al DialogoManager que se colocó un fusible (esto cumple requisitos vinculados)
-                    DialogoManager.instancia?.CumplirRequisito();
+                    DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeColocarFusible);
+
                 }
 
                 //Si ya se colocaron todos los fusibles
@@ -48,7 +50,8 @@ public class ZonaFusibles : MonoBehaviour
                     }
 
                     // Notificar al DialogoManager que la tarea completa fue realizada
-                    DialogoManager.instancia?.CumplirRequisito();
+                    DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeCumplirFusible);
+
                 }
             }
             else

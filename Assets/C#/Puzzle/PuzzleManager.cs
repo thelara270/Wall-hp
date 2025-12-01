@@ -13,6 +13,9 @@ public class PuzzleManager : MonoBehaviour
 
     private bool puzzleCompletado = false;
 
+    public ZonaCodigo zonaCodigo;
+
+
     void Start()
     {
         if (botonReintentar != null)
@@ -39,6 +42,8 @@ public class PuzzleManager : MonoBehaviour
             Debug.Log("¡Puzzle completado!");
 
             AudioManager.instance?.SonidoRompecabezas();
+            Invoke(nameof(CerrarAutomaticamente), zonaCodigo.tiempoCierreAutomatico);
+
 
             // Dispara el evento
             OnPuzzleCompletado?.Invoke();
@@ -58,5 +63,10 @@ public class PuzzleManager : MonoBehaviour
         }
 
         Debug.Log("Puzzle reiniciado correctamente.");
+    }
+
+    private void CerrarAutomaticamente()
+    {
+        zonaCodigo.CerrarPanel();
     }
 }

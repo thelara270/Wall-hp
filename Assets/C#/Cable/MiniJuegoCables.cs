@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static DialogoManager;
 
 public class MinijuegoCables : MonoBehaviour
 {
@@ -49,6 +50,9 @@ public class MinijuegoCables : MonoBehaviour
         {
             Debug.Log("Todos los cables conectados. El Panel ha sido reparado");
 
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
             estadoPanel = true;
 
             AudioManager.instance?.SonidoPanelCarpetas();
@@ -64,7 +68,7 @@ public class MinijuegoCables : MonoBehaviour
             if (panel != null) panel.Reparar();
 
             // Notificar al DialogoManager que completaste el minijuego
-            DialogoManager.instancia?.CumplirRequisito();
+            DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeRepararCables);
         }
     }
 }

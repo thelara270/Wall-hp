@@ -281,15 +281,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4787147465336689439, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
       propertyPath: fuerzaSalto
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4787147465336689439, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
       propertyPath: gravedadCaida
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4787147465336689439, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
       propertyPath: gravedadExtra
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8743369883926009863, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
       propertyPath: m_Mass

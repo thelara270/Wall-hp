@@ -374,14 +374,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1274847669291622793, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1277038743597289380, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: puntosPatrulla.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1277038743597289380, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
       propertyPath: puntosPatrulla.Array.data[0]
       value: 
@@ -398,81 +390,14 @@ PrefabInstance:
       propertyPath: puntosPatrulla.Array.data[3]
       value: 
       objectReference: {fileID: 268391215}
-    - target: {fileID: 1277038743597289380, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: puntosPatrulla.Array.data[4]
-      value: 
-      objectReference: {fileID: 686606795}
-    - target: {fileID: 1277038743597289380, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: puntosPatrulla.Array.data[5]
-      value: 
-      objectReference: {fileID: 1718428774}
-    - target: {fileID: 1277038743597289380, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: puntosPatrulla.Array.data[6]
-      value: 
-      objectReference: {fileID: 471784062}
-    - target: {fileID: 1277038743597289380, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: puntosPatrulla.Array.data[7]
-      value: 
-      objectReference: {fileID: 268391215}
-    - target: {fileID: 1537905361467763826, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1775102679924914404, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2200173286755966043, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 3279836452253244559, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
       propertyPath: m_Name
       value: El Patrullas
       objectReference: {fileID: 0}
-    - target: {fileID: 3279836452253244559, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4749006378497163153, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4777137445480754203, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343308738783124297, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5717974226343719566, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7482205008279305408, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7911875850573592559, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8166955691177373953, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856831342806386899, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3279836452253244559, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1671080012}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
 --- !u!1 &322677762 stripped
 GameObject:
@@ -2385,6 +2310,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4917781034739850894, guid: 8675f3727a340be4592d39c8658281ad, type: 3}
+      propertyPath: sensibilidadX
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917781034739850894, guid: 8675f3727a340be4592d39c8658281ad, type: 3}
+      propertyPath: sensibilidadY
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 6360527329295131493, guid: 8675f3727a340be4592d39c8658281ad, type: 3}
       propertyPath: m_Name
       value: Jugador
@@ -3258,32 +3191,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608041388}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1671080008 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3279836452253244559, guid: e21f37453d42add4f9ff1d9de3ec4dc6, type: 3}
-  m_PrefabInstance: {fileID: 270673149}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1671080012
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671080008}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.38
-  m_Center: {x: 0, y: 0.62, z: -0.06}
 --- !u!1 &1710096382
 GameObject:
   m_ObjectHideFlags: 3

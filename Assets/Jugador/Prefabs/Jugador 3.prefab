@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: tamanoDeteccion.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8743369883926009863, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9219235000537204083, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

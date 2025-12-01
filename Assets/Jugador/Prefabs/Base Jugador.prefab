@@ -284,8 +284,8 @@ MonoBehaviour:
   capaSuelo:
     serializedVersion: 2
     m_Bits: 8
-  gravedadExtra: 20
-  gravedadCaida: 30
+  gravedadExtra: 5
+  gravedadCaida: 20
 --- !u!114 &6039368057954735208
 MonoBehaviour:
   m_ObjectHideFlags: 0

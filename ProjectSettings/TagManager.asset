@@ -8,6 +8,7 @@ TagManager:
   - Regadera
   - Indicador
   - BarraVida
+  - BarraVidaEnemigo
   layers:
   - Default
   - TransparentFX

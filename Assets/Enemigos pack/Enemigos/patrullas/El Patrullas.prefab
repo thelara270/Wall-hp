@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4486751406934230477}
   - component: {fileID: 8381054768331669166}
   m_Layer: 5
-  m_Name: Imagen Vida
+  m_Name: Barra Vida ijii
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,8 +318,8 @@ GameObject:
   - component: {fileID: 941864593171646395}
   - component: {fileID: 171519628895963023}
   m_Layer: 5
-  m_Name: Imagen Vida Relleno
-  m_TagString: BarraVida
+  m_Name: Barra Vida
+  m_TagString: BarraVidaEnemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 1277038743597289380}
   - component: {fileID: 3873191364142527338}
   - component: {fileID: 5716137140583124868}
+  - component: {fileID: 2401026055182996774}
   m_Layer: 9
   m_Name: El Patrullas
   m_TagString: Untagged
@@ -496,6 +497,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.56
   m_Center: {x: 0, y: 0.62, z: -0.06}
+--- !u!114 &2401026055182996774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279836452253244559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fa4ebf6ee9a164787583b77189c5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaMaxima: 60
+  vidaActual: 60
+  barraVida: {fileID: 171519628895963023}
 --- !u!1 &4749006378497163153
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +916,7 @@ GameObject:
   - component: {fileID: 9196245165859401064}
   - component: {fileID: 2190985490340639102}
   - component: {fileID: 3692803125959460260}
+  - component: {fileID: 4531353621184452304}
   m_Layer: 9
   m_Name: Modelo
   m_TagString: Untagged
@@ -997,3 +1014,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &4531353621184452304
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856831342806386899}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9592841, y: 2.42845, z: 1.8689604}
+  m_Center: {x: -6.81394, y: 1.9754766, z: -0.73793966}

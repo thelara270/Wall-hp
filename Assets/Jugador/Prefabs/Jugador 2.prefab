@@ -151,12 +151,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetivo: {fileID: 1535104411291899687}
-  distancia: 7
+  distancia: 9
   distanciaMin: 1
   distanciaMax: 4
   distanciaAIM: 2
   velocidadZoom: 10
-  altura: 4
+  altura: 4.3
   sensibilidadX: 100
   sensibilidadY: 100
   minY: -40

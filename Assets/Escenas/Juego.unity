@@ -20975,16 +20975,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ActualizadorNavMesh, Assembly-CSharp
-        m_MethodName: ReconstruirNavMesh
-        m_Mode: 1
+      - m_Target: {fileID: 762398001}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CambiarEscena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Pruebas
           m_BoolArgument: 0
         m_CallState: 2
   fusiblesColocados: 0
@@ -22301,6 +22301,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3337220202703402979, guid: e4980677bfe9a4c4ba1351ff8bc1296e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0234
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337220202703402979, guid: e4980677bfe9a4c4ba1351ff8bc1296e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0323
+      objectReference: {fileID: 0}
     - target: {fileID: 3391724224581288017, guid: e4980677bfe9a4c4ba1351ff8bc1296e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -22569,6 +22577,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.00376163
       objectReference: {fileID: 0}
+    - target: {fileID: 6749904803814183657, guid: e4980677bfe9a4c4ba1351ff8bc1296e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6749904803814183657, guid: e4980677bfe9a4c4ba1351ff8bc1296e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0322
+      objectReference: {fileID: 0}
     - target: {fileID: 6807584753841544673, guid: e4980677bfe9a4c4ba1351ff8bc1296e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -22671,7 +22687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807994658272265350, guid: e4980677bfe9a4c4ba1351ff8bc1296e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0757
+      value: -0.0821
       objectReference: {fileID: 0}
     - target: {fileID: 9097578445651499121, guid: e4980677bfe9a4c4ba1351ff8bc1296e, type: 3}
       propertyPath: m_Layer

@@ -122,12 +122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4aa72b8260d4ff4cb51595ea07cafd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 40
+  velocidad: 100
   vida: 2
   particulasImpacto: {fileID: 186682, guid: 8a7eba29f62de1a4fa345bf32df5d52f, type: 3}
   layersPermitidas:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!54 &5662779080077422096
 Rigidbody:
   m_ObjectHideFlags: 0

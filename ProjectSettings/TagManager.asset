@@ -9,6 +9,7 @@ TagManager:
   - Indicador
   - BarraVida
   - BarraVidaEnemigo
+  - Mano
   layers:
   - Default
   - TransparentFX

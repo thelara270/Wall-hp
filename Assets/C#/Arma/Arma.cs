@@ -1,0 +1,104 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+public class Arma : MonoBehaviour
+{
+    [Header("Referencias")]
+    public Camera camaraJugador;
+    public Transform puntoDisparo;
+    public CamaraTercera camaraTercera;
+
+    [Header("Mano")]
+    public Transform manoJugador;
+
+    [Header("Disparo")]
+    public float cadencia = 0.15f;
+    private float tiempoDisparo = 0f;
+
+    [Header("Pool")]
+    public GameObject balaPrefab;
+    public int cantidadPool = 20;
+    private Queue<GameObject> poolBalas = new Queue<GameObject>();
+
+    void Start()
+    {
+        if (camaraJugador == null)
+            camaraJugador = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
+        if (camaraTercera == null)
+            camaraTercera = camaraJugador.GetComponent<CamaraTercera>();
+
+        if (manoJugador == null)
+        {
+            GameObject mano = GameObject.FindGameObjectWithTag("Mano");
+            if (mano != null)
+                manoJugador = mano.transform;
+        }
+
+        CrearPool();
+    }
+
+    void Update()
+    {
+        // No dispara si no está en la mano del jugador
+        if (transform.parent != manoJugador)
+            return;
+
+        if (Input.GetMouseButton(0) && Time.time > tiempoDisparo)
+        {
+            Disparar();
+            tiempoDisparo = Time.time + cadencia;
+        }
+    }
+
+    void CrearPool()
+    {
+        for (int i = 0; i < cantidadPool; i++)
+        {
+            GameObject nuevaBala = Instantiate(balaPrefab);
+            nuevaBala.SetActive(false);
+            poolBalas.Enqueue(nuevaBala);
+        }
+    }
+
+    GameObject ObtenerBala()
+    {
+        GameObject bala = poolBalas.Dequeue();
+        bala.SetActive(true);
+        return bala;
+    }
+
+    public void RetornarBala(GameObject bala)
+    {
+        bala.SetActive(false);
+        poolBalas.Enqueue(bala);
+    }
+
+    void Disparar()
+    {
+        GameObject bala = ObtenerBala();
+        bala.transform.position = puntoDisparo.position;
+
+        Vector3 direccion;
+
+        if (camaraTercera != null && camaraTercera.enemigoMasCercano != null)
+        {
+            direccion = (camaraTercera.enemigoMasCercano.position - puntoDisparo.position).normalized;
+        }
+        else
+        {
+            if (Physics.Raycast(camaraJugador.transform.position, camaraJugador.transform.forward,
+                                out RaycastHit hit, 200f))
+            {
+                direccion = (hit.point - puntoDisparo.position).normalized;
+            }
+            else
+            {
+                direccion = camaraJugador.transform.forward;
+            }
+        }
+
+        Bala b = bala.GetComponent<Bala>();
+        b.Disparar(direccion, this);
+    }
+}

@@ -36,6 +36,9 @@ public class EstadoBossTransicionFase2 : EstadoBoss
             // Log para depuración de la transición
             Debug.Log("Transición a Fase 2 completada");
 
+            boss.CambiarEstado(boss.GetEstadoIdleFase2());
+
+
             // En este punto se debería cambiar al primer estado de la Fase 2
             // Por ahora no hay estado Fase 2 implementado, así que dejamos la lógica aquí
         }

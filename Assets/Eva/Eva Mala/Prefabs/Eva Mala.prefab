@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 1414027464002104011}
   - component: {fileID: 1241123995034650808}
   - component: {fileID: 8080536687575384627}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: "Colision Da\xF1o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

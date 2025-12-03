@@ -1,6 +1,6 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 
-// Estado de generaciÛn de enemigos 911 y bombas de prueba
+// Estado de generaci√≥n de enemigos 911 y bombas de prueba
 public class EstadoBossSpawn911 : EstadoBoss
 {
     // Temporizador interno para spawn de bombas
@@ -28,7 +28,7 @@ public class EstadoBossSpawn911 : EstadoBoss
         // Reinicia el temporizador
         tiempo = 0f;
 
-        // Pone al boss en animaciÛn idle mientras espera
+        // Pone al boss en animaci√≥n idle mientras espera
         boss.SetAnimadorEstado(boss.idIdleFase1);
 
         // Activa los puntos de spawn (por si estaban apagados)
@@ -39,7 +39,7 @@ public class EstadoBossSpawn911 : EstadoBoss
         }
     }
 
-    // ActualizaciÛn del estado
+    // Actualizaci√≥n del estado
     public override void ActualizarEstado()
     {
         // Aumenta el temporizador
@@ -52,29 +52,28 @@ public class EstadoBossSpawn911 : EstadoBoss
             boss.SetAnimadorEstado(boss.idSpawn911);
             LanzarBombasDesdePuntos();
         }
-        else
+        else if (!boss.TodosLosPuntosDestruidos())
         {
             boss.SetAnimadorEstado(boss.idIdleFase1);
         }
 
-        // Si todos los puntos de spawn est·n destruidos, cambia de estado
+        // Si todos los puntos de spawn est√°n destruidos, cambia de estado
         if (boss.TodosLosPuntosDestruidos())
         {
             boss.CambiarEstado(boss.ObtenerTransicionFase2());
-            tiempo = 0;
         }
     }
 
 
-    // Lanza una bomba en cada punto de spawn que no estÈ destruido
+    // Lanza una bomba en cada punto de spawn que no est√© destruido
     void LanzarBombasDesdePuntos()
     {
         foreach (var p in boss.puntosSpawn)
         {
-            // Si el punto existe y no est· destruido
+            // Si el punto existe y no est√° destruido
             if (p != null && !p.estaDestruido)
             {
-                // Instancia una bomba en la posiciÛn del punto
+                // Instancia una bomba en la posici√≥n del punto
                 Object.Instantiate(prefabBomba, p.transform.position, p.transform.rotation);
             }
         }
@@ -83,6 +82,6 @@ public class EstadoBossSpawn911 : EstadoBoss
     // Salida del estado
     public override void SalirEstado()
     {
-        // No necesita lÛgica al salir
+        // No necesita l√≥gica al salir
     }
 }

@@ -225,7 +225,7 @@ MonoBehaviour:
   puntosSpawn:
   - {fileID: 1379765780}
   - {fileID: 929621992}
-  tiempoTransicion: 2
+  tiempoTransicion: 1
   animador: {fileID: 18361205}
   parametroEstado: EstadoBoss
   triggerTransicionFase2: TriggerTransicionFase2

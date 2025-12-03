@@ -5,7 +5,8 @@ using System.Collections;
 public class ControladorTorreta : MonoBehaviour
 {
     public Transform jugador;
-    public float rangoDeteccion = 10f;
+    public float rangoDeteccion = 10f; // usado por el boss para setear rango
+    public bool estaActiva = false; // cuando el boss la activa la torreta funciona
     public Transform puntoDisparo;
 
     public float tiempoAntesDeDisparar = 2f;

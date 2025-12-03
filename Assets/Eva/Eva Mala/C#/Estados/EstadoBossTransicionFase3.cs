@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class EstadoBossTransicionFase3 : EstadoBoss
 {
@@ -9,7 +9,27 @@ public class EstadoBossTransicionFase3 : EstadoBoss
     public override void EntrarEstado()
     {
         boss.SetAnimadorEstado(boss.idFase3);
-        Debug.Log("¡¡ EVA entra en la FASE 3 !!");
+        Debug.Log("Â¡Â¡ EVA entra en la FASE 3 !!");
+
+        // -----------------------------------
+        // ðŸ”¥ ACTIVAR TORRETAS Y PONER RANGO 0
+        // -----------------------------------
+        if (boss.torretasFase3 != null)
+        {
+            foreach (var torreta in boss.torretasFase3)
+            {
+                if (torreta == null) continue;
+
+                // Activamos el GameObject
+                torreta.gameObject.SetActive(true);
+
+                // Guardamos su rango real (se usa luego en EstadoCansadaTorretas)
+                torreta.rangoDeteccion = 0f;
+
+                // FORZAR A ESTAR INACTIVA mientras dura la transiciÃ³n
+                torreta.ChangeState(torreta.GetIdleState());
+            }
+        }
     }
 
     public override void ActualizarEstado()
@@ -18,9 +38,13 @@ public class EstadoBossTransicionFase3 : EstadoBoss
 
         if (tiempo <= 0)
         {
-            // Aquí irá el inicio de Fase 3 real
+            // Pasar al estado de lÃ¡seres
+            boss.CambiarEstado(boss.GetEstadoLaserCombinado());
         }
     }
 
-    public override void SalirEstado() { }
+    public override void SalirEstado()
+    {
+        // Nada que hacer aquÃ­ por ahora
+    }
 }

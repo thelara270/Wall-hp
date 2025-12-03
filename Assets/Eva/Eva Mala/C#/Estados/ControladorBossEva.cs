@@ -68,6 +68,36 @@ public class ControladorBossEva : MonoBehaviour
 
     [HideInInspector] public bool ultimoAtaqueFueIzquierda = false;
 
+    // ---------- FASE 3 (láseres y torretas) ----------
+    [Header("Fase3 - Laser y Torretas")]
+    public List<ZonaLaser> zonasLaserSecuenciales = new List<ZonaLaser>();
+    public List<ZonaLaser> zonasLaserTodas = new List<ZonaLaser>();
+    public float tiempoPorZonaLaser = 1.5f;
+    public float tiempoLaserPotente = 2f;
+
+    public float tiempoCansada = 1.0f;
+    public List<ControladorTorreta> torretasFase3 = new List<ControladorTorreta>();
+    public float rangoTorretasF3 = 12f;
+    public float tiempoVulnerableTorretas = 4f;
+
+    [Header("Vida Boss (Fase3)")]
+    public VidaBossEva vidaBossEva;
+    public int vidaMaximaF3 = 300;
+    public int vidaActualF3;
+
+    [Header("Animaciones Fase3 (IDs)")]
+    public int idLaserSecuencial = 9;
+    public int idLaserPotente = 10;
+    public int idTorretasActivas = 11;
+    public int idMuerteEva = 12;
+
+    [HideInInspector] public bool puedeRecibirDañoF3 = false;
+
+    // Estados fase3
+    private EstadoBossLaserCombinado estadoLaserCombinado;
+    private EstadoBossCansadaTorretas estadoCansadaTorretas;
+    private EstadoBossMuerte estadoMuerte;
+
     void Start()
     {
         // Fase 1
@@ -84,6 +114,15 @@ public class ControladorBossEva : MonoBehaviour
         estadoBrazoDaño = new EstadoBossBrazoDaño(this);
         estadoBrazoCaido = new EstadoBossBrazoCaido(this);
         estadoTransicionFase3 = new EstadoBossTransicionFase3(this);
+
+        // Instancia estados Fase 3
+        estadoLaserCombinado = new EstadoBossLaserCombinado(this);
+        estadoCansadaTorretas = new EstadoBossCansadaTorretas(this);
+        estadoMuerte = new EstadoBossMuerte(this);
+
+        // Inicializar vida F3 y HUD si existe
+        vidaActualF3 = vidaMaximaF3;
+        if (vidaBossEva != null) vidaBossEva.SetVidaMaxima(vidaMaximaF3);
     }
 
     void Update()
@@ -123,6 +162,11 @@ public class ControladorBossEva : MonoBehaviour
     public EstadoBossBrazoDaño GetEstadoBrazoDaño() => estadoBrazoDaño;
     public EstadoBossBrazoCaido GetEstadoBrazoCaido() => estadoBrazoCaido;
     public EstadoBossTransicionFase3 GetEstadoTransicionFase3() => estadoTransicionFase3;
+
+    // Getters Fase 3
+    public EstadoBossLaserCombinado GetEstadoLaserCombinado() => estadoLaserCombinado;
+    public EstadoBossCansadaTorretas GetEstadoCansadaTorretas() => estadoCansadaTorretas;
+    public EstadoBossMuerte GetEstadoMuerte() => estadoMuerte;
 
     // =================== ANIMADOR ===================
     public void SetAnimadorEstado(int valor)

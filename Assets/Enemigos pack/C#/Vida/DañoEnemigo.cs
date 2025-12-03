@@ -1,29 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DañoEnemigo : MonoBehaviour
 {
-    public int daño = 20; // Daño por golpe o bala
+    public int daño = 20;
 
     private void OnCollisionEnter(Collision collision)
     {
-        ControladorVidaEnemigo vida = collision.gameObject.GetComponent<ControladorVidaEnemigo>();
-
-        if (vida != null)
-        {
-            vida.RecibirDaño(daño);
-        }
+        AplicarDaño(collision.gameObject);
     }
 
-    // También funciona con triggers
     private void OnTriggerEnter(Collider other)
     {
-        ControladorVidaEnemigo vida = other.GetComponent<ControladorVidaEnemigo>();
+        AplicarDaño(other.gameObject);
+    }
 
-        if (vida != null)
+    private void AplicarDaño(GameObject obj)
+    {
+        // 1. Si es enemigo normal
+        ControladorVidaEnemigo vidaEnemigo = obj.GetComponent<ControladorVidaEnemigo>();
+        if (vidaEnemigo != null)
         {
-            vida.RecibirDaño(daño);
+            vidaEnemigo.RecibirDaño(daño);
+            return;
+        }
+
+        // 2. Si es EVA
+        VidaBossEva vidaEva = obj.GetComponent<VidaBossEva>();
+        if (vidaEva != null)
+        {
+            vidaEva.RecibirDaño(daño);
+            return;
         }
     }
 }

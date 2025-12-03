@@ -14,6 +14,9 @@ public class EstadoBossAnimarBrazo : EstadoBoss
 
         boss.brazoActual = usarIzquierdo ? boss.brazoIzquierdo : boss.brazoDerecho;
 
+        if (boss.brazoActual.animadorBrazo != null)
+            boss.brazoActual.animadorBrazo.SetTrigger(boss.brazoActual.triggerAtacar);
+
         tiempo = boss.tiempoAnimacionBrazo;
     }
 

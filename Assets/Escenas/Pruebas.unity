@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVA (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5666261585234168772, guid: 19676ac9f46ac794982074c960b1f6ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 8700725330082129686, guid: 19676ac9f46ac794982074c960b1f6ce, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -328,7 +332,8 @@ MonoBehaviour:
   destruido: 0
   "puedeRecibirDa\xF1o": 0
   animadorBrazo: {fileID: 18361213}
-  animTriggerCaer: BrazoCaer
+  triggerAtacar: Atacar
+  triggerCaer: Caer
 --- !u!114 &18361209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +351,8 @@ MonoBehaviour:
   destruido: 0
   "puedeRecibirDa\xF1o": 0
   animadorBrazo: {fileID: 18361216}
-  animTriggerCaer: BrazoCaer
+  triggerAtacar: Atacar
+  triggerCaer: Caer
 --- !u!95 &18361213
 Animator:
   serializedVersion: 5
@@ -357,7 +363,7 @@ Animator:
   m_GameObject: {fileID: 18361206}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0aed81975fce62e45a2b2749136412b1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 00610a44822825641ab7815671ce5f88, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

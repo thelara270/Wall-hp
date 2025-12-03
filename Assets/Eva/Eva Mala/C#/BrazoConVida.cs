@@ -6,10 +6,12 @@ public class BrazoConVida : MonoBehaviour
     public int vidaActual = 100;
 
     public bool destruido = false;
-    public bool puedeRecibirDaño = false; // NUEVO
+    public bool puedeRecibirDaño = false;
 
+    [Header("Animator")]
     public Animator animadorBrazo;
-    public string animTriggerCaer = "BrazoCaer";
+    public string triggerAtacar = "Atacar";
+    public string triggerCaer = "Caer";
 
     Collider col;
 
@@ -17,7 +19,7 @@ public class BrazoConVida : MonoBehaviour
     {
         vidaActual = vidaMaxima;
         col = GetComponent<Collider>();
-        puedeRecibirDaño = false;     // Desactivado al inicio
+        puedeRecibirDaño = false;
     }
 
     public void ActivarDaño()
@@ -34,7 +36,7 @@ public class BrazoConVida : MonoBehaviour
 
     public void RecibirDaño(int cantidad)
     {
-        if (!puedeRecibirDaño) return;  // 🚨 NUEVO
+        if (!puedeRecibirDaño) return;
         if (destruido) return;
 
         vidaActual -= cantidad;
@@ -54,7 +56,7 @@ public class BrazoConVida : MonoBehaviour
         if (col != null) col.enabled = false;
 
         if (animadorBrazo != null)
-            animadorBrazo.SetTrigger(animTriggerCaer);
+            animadorBrazo.SetTrigger(triggerCaer);
     }
 
     private void OnTriggerEnter(Collider other)

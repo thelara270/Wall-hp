@@ -14,14 +14,12 @@ public class EstadoBossActivarZonaElectrificada : EstadoBoss
 
         bool atacarIzquierda;
 
-        // Ambos brazos vivos → alternancia
         if (!boss.brazoIzquierdo.destruido && !boss.brazoDerecho.destruido)
         {
             atacarIzquierda = !boss.ultimoAtaqueFueIzquierda;
         }
         else
         {
-            // Si solo un brazo queda vivo:
             atacarIzquierda = !boss.brazoIzquierdo.destruido;
         }
 

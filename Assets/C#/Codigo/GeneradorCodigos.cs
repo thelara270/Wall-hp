@@ -49,7 +49,7 @@ public class GeneradorCodigos : MonoBehaviour
 
     private string GenerarCodigoAleatorio(int longitud)
     {
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        const string chars = "ABCDFGHIJKLMNOPQRSTUVWXYZ0123456789";
         string codigo = "";
 
         for (int i = 0; i < longitud; i++)

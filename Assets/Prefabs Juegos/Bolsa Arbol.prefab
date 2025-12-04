@@ -71,8 +71,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 4.2565813, y: 2, z: 2.7829533}
+  m_Center: {x: -0.054847836, y: 0.5, z: 0.0184443}
 --- !u!1 &5698048186227973203
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,8 +176,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.4630044, y: 1, z: 1}
+  m_Center: {x: 0.7315023, y: 0, z: 0}
 --- !u!1001 &1816271935297299250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -239,17 +239,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6902573867230041995, guid: 29f19d589265e8a449d1c00ec854de7f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6902573867230041995, guid: 29f19d589265e8a449d1c00ec854de7f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6dd53813b3e5b35429ec378315249dae, type: 2}
+    - target: {fileID: -6902573867230041995, guid: 29f19d589265e8a449d1c00ec854de7f, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ec927e071e305140809961b5f25c411, type: 2}
     - target: {fileID: 919132149155446097, guid: 29f19d589265e8a449d1c00ec854de7f, type: 3}
       propertyPath: m_Name
       value: Semillas Banano
       objectReference: {fileID: 0}
     - target: {fileID: 6944656104360116776, guid: 29f19d589265e8a449d1c00ec854de7f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944656104360116776, guid: 29f19d589265e8a449d1c00ec854de7f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 9185737683893222716, guid: d489d37ba7e3d6a4b823c396ac607396, type: 3}
+    - target: {fileID: 6944656104360116776, guid: 29f19d589265e8a449d1c00ec854de7f, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ec927e071e305140809961b5f25c411, type: 2}
     - target: {fileID: 8670761335428686811, guid: 29f19d589265e8a449d1c00ec854de7f, type: 3}
       propertyPath: m_LocalScale.x
       value: 139.49062

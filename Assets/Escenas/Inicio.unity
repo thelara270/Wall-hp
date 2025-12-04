@@ -736,7 +736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WallHP
+  m_text: Wall I
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb0ba4ee596a3a843bb1ddeefa6e89d2, type: 2}
   m_sharedMaterial: {fileID: 1362201077571572023, guid: cb0ba4ee596a3a843bb1ddeefa6e89d2, type: 2}
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 157.2
+  m_fontSize: 190.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

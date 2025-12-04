@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456278fc38217fd44a7565214e6029c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
+  velocidad: 30
   tiempoVida: 3
   particulaImpacto: {fileID: 190680, guid: 774951e07dbd3d1499829eb3f3bbe53a, type: 3}
 --- !u!114 &3800319738997228695

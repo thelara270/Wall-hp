@@ -378,8 +378,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
   rangoDeteccion: 10
+  estaActiva: 0
   puntoDisparo: {fileID: 6067543820948614133}
-  tiempoAntesDeDisparar: 1
+  tiempoAntesDeDisparar: 0.5
   luzDeteccion: {fileID: 5788066198586358018}
   animator: {fileID: 0}
 --- !u!95 &5350460314696568321

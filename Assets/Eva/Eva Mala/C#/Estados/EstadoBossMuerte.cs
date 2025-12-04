@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 // EstadoBossMuerte: rutina de muerte del boss.
@@ -34,6 +35,8 @@ public class EstadoBossMuerte : EstadoBoss
         if (boss.vidaBossEva != null) boss.vidaBossEva.DesactivarDaño();
 
         Debug.Log("EVA: Estado de muerte iniciado.");
+
+        
     }
 
     public override void ActualizarEstado()
@@ -44,6 +47,7 @@ public class EstadoBossMuerte : EstadoBoss
         {
             // Aquí podrías disparar la eliminación del boss, recompensa, cambio de escena, etc.
             Debug.Log("EVA: muerte finalizada. Implementa lógica de final de combate aquí.");
+            boss.EvaMurio();
         }
     }
 

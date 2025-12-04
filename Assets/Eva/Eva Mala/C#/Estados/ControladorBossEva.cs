@@ -97,6 +97,8 @@ public class ControladorBossEva : MonoBehaviour
     private EstadoBossLaserCombinado estadoLaserCombinado;
     private EstadoBossCansadaTorretas estadoCansadaTorretas;
     private EstadoBossMuerte estadoMuerte;
+    public GameObject panelFinal;
+    
 
     void Start()
     {
@@ -149,6 +151,11 @@ public class ControladorBossEva : MonoBehaviour
                 return false;
 
         return true;
+    }
+
+    public void EvaMurio()
+    {
+        panelFinal.SetActive(true);
     }
 
     // =================== GETTERS ===================

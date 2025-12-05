@@ -1,4 +1,5 @@
 using UnityEngine;
+using static DialogoManager;
 
 public class MisionSala2 : MisionBase
 {
@@ -36,5 +37,6 @@ public class MisionSala2 : MisionBase
         // Llama al método base para marcar como completada
         base.CompletarMision();
         Debug.Log("Misión de la Sala 2 completada: todos los árboles crecieron");
+        DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeCumplirMision2);
     }
 }

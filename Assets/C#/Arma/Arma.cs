@@ -20,26 +20,22 @@ public class Arma : MonoBehaviour
     public int cantidadPool = 20;
     private Queue<GameObject> poolBalas = new Queue<GameObject>();
 
+
     void Start()
     {
-        if (camaraJugador == null)
-            camaraJugador = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
-        if (camaraTercera == null)
-            camaraTercera = camaraJugador.GetComponent<CamaraTercera>();
-
-        if (manoJugador == null)
-        {
-            GameObject mano = GameObject.FindGameObjectWithTag("Mano");
-            if (mano != null)
-                manoJugador = mano.transform;
-        }
-
+        IntentarObtenerReferencias();
         CrearPool();
     }
 
     void Update()
     {
+        // Si faltan referencias, seguir intentando hasta encontrarlas
+        if (!ReferenciasListas())
+        {
+            IntentarObtenerReferencias();
+            return;
+        }
+
         // No dispara si no está en la mano del jugador
         if (transform.parent != manoJugador)
             return;
@@ -50,6 +46,44 @@ public class Arma : MonoBehaviour
             tiempoDisparo = Time.time + cadencia;
         }
     }
+
+    // -------------------------------------------------------------
+    // ------------------ SISTEMA DE REFERENCIAS -------------------
+    // -------------------------------------------------------------
+
+    bool ReferenciasListas()
+    {
+        return camaraJugador != null &&
+               camaraTercera != null &&
+               manoJugador != null &&
+               puntoDisparo != null;
+    }
+
+    void IntentarObtenerReferencias()
+    {
+        if (camaraJugador == null)
+        {
+            GameObject camara = GameObject.FindGameObjectWithTag("MainCamera");
+            if (camara != null)
+                camaraJugador = camara.GetComponent<Camera>();
+        }
+
+        if (camaraTercera == null && camaraJugador != null)
+        {
+            camaraTercera = camaraJugador.GetComponent<CamaraTercera>();
+        }
+
+        if (manoJugador == null)
+        {
+            GameObject mano = GameObject.FindGameObjectWithTag("Mano");
+            if (mano != null)
+                manoJugador = mano.transform;
+        }
+    }
+
+    // -------------------------------------------------------------
+    // ---------------------- SISTEMA DE POOL -----------------------
+    // -------------------------------------------------------------
 
     void CrearPool()
     {
@@ -74,6 +108,10 @@ public class Arma : MonoBehaviour
         poolBalas.Enqueue(bala);
     }
 
+    // -------------------------------------------------------------
+    // --------------------------- DISPARO --------------------------
+    // -------------------------------------------------------------
+
     void Disparar()
     {
         GameObject bala = ObtenerBala();
@@ -81,13 +119,16 @@ public class Arma : MonoBehaviour
 
         Vector3 direccion;
 
+        // Si hay enemigo targeteado
         if (camaraTercera != null && camaraTercera.enemigoMasCercano != null)
         {
             direccion = (camaraTercera.enemigoMasCercano.position - puntoDisparo.position).normalized;
         }
         else
         {
-            if (Physics.Raycast(camaraJugador.transform.position, camaraJugador.transform.forward,
+            // Raycast desde la cámara
+            if (Physics.Raycast(camaraJugador.transform.position,
+                                camaraJugador.transform.forward,
                                 out RaycastHit hit, 200f))
             {
                 direccion = (hit.point - puntoDisparo.position).normalized;

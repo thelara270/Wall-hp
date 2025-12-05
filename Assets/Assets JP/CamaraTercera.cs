@@ -92,7 +92,7 @@ public class CamaraTercera : MonoBehaviour
     {
         if (objetivo == null) return;
 
-        DetectarEnemigoMasCercano();
+        //DetectarEnemigoMasCercano();
 
         if (Input.GetMouseButtonDown(1)) apuntando = true;
         if (Input.GetMouseButtonUp(1)) apuntando = false;
@@ -125,21 +125,21 @@ public class CamaraTercera : MonoBehaviour
     // ------------------------------------------------------
     //       BUSCAR EL ENEMIGO MÁS CERCA
     // ------------------------------------------------------
-    void DetectarEnemigoMasCercano()
-    {
-        Collider[] detectados = Physics.OverlapSphere(objetivo.position, rangoAutoAim, capaEnemigos);
+    //void DetectarEnemigoMasCercano()
+    //{
+    //    Collider[] detectados = Physics.OverlapSphere(objetivo.position, rangoAutoAim, capaEnemigos);
 
-        if (detectados.Length == 0)
-        {
-            enemigoMasCercano = null;
-            return;
-        }
+    //    if (detectados.Length == 0)
+    //    {
+    //        enemigoMasCercano = null;
+    //        return;
+    //    }
 
-        enemigoMasCercano = detectados
-            .OrderBy(x => Vector3.Distance(objetivo.position, x.transform.position))
-            .First()
-            .transform;
-    }
+    //    enemigoMasCercano = detectados
+    //        .OrderBy(x => Vector3.Distance(objetivo.position, x.transform.position))
+    //        .First()
+    //        .transform;
+    //}
 
     // ------------------------------------------------------
     //      ROTACIÓN DE CÁMARA + AUTO AIM
@@ -151,17 +151,17 @@ public class CamaraTercera : MonoBehaviour
         rotY -= Input.GetAxis("Mouse Y") * sensibilidadY * Time.deltaTime;
         rotY = Mathf.Clamp(rotY, minY, maxY);
 
-        // SI SE ESTÁ APUNTANDO Y HAY ENEMIGO: GIRAR HACIA ÉL
-        if (apuntando && enemigoMasCercano != null)
-        {
-            Vector3 direccion = enemigoMasCercano.position - objetivo.position;
-            Quaternion rotObjetivo = Quaternion.LookRotation(direccion);
+        //// SI SE ESTÁ APUNTANDO Y HAY ENEMIGO: GIRAR HACIA ÉL
+        //if (apuntando && enemigoMasCercano != null)
+        //{
+        //    Vector3 direccion = enemigoMasCercano.position - objetivo.position;
+        //    Quaternion rotObjetivo = Quaternion.LookRotation(direccion);
 
-            // Convertir a ángulos para la cámara
-            Vector3 ang = rotObjetivo.eulerAngles;
+        //    // Convertir a ángulos para la cámara
+        //    Vector3 ang = rotObjetivo.eulerAngles;
 
-            rotX = Mathf.Lerp(rotX, ang.y, Time.deltaTime * 5f);
-        }
+        //    rotX = Mathf.Lerp(rotX, ang.y, Time.deltaTime * 5f);
+        //}
     }
 
     // ------------------------------------------------------

@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 46088441}
   nombreEscenaDestino: Juego
+  fade: {fileID: 1271303001}
+  fadeAntesDeFinal: 5
 --- !u!328 &46088441
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -969,8 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d0a2b4002b4b048886d876f450d2b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duracionFade: 3
-  tiempoEspera: 1
+  duracionFade: 4
 --- !u!114 &1271303002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,6 +1131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85cab94cd27d6f4e9bb8b726f702f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelPausa: {fileID: 0}
+  canvasHUD: {fileID: 0}
+  bloqueoPausa: 0
 --- !u!4 &1535540334
 Transform:
   m_ObjectHideFlags: 0

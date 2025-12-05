@@ -1,4 +1,5 @@
 using UnityEngine;
+using static DialogoManager;
 
 // Clase que representa la misión correspondiente a la Sala 4,
 // donde el jugador debe completar un rompecabezas (puzzle).
@@ -47,6 +48,8 @@ public class MisionSala4 : MisionBase
     public override void CompletarMision()
     {
         base.CompletarMision();
+        DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeCumplirMision4);
+
 
         if (puzzleManager != null)
             puzzleManager.OnPuzzleCompletado -= CompletarMision;

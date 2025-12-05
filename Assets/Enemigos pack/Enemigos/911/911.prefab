@@ -152,11 +152,11 @@ MonoBehaviour:
   animator: {fileID: 6124699805853912262}
   radioDeteccion: 50
   tiempoCarga: 0
-  velocidadAtaque: 10
+  velocidadAtaque: 20
   distanciaExplosion: 1.2
   "da\xF1o": 5
   particulasExplosion: {fileID: 190680, guid: f503d0eb2fa71a9478eb7c5bee4dd261, type: 3}
-  tiempoMaximoVivo: 3
+  tiempoMaximoVivo: 5
   radioDeteccionPared: 0.5
   tagParedes: Pared
 --- !u!114 &6672311212004272456

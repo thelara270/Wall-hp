@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using static DialogoManager;
 
 public class Curacion : MonoBehaviour
 {
@@ -41,19 +42,11 @@ public class Curacion : MonoBehaviour
         if (movimientoJugador != null)
             movimientoJugador.enabled = false;
 
-        // BLOQUEAR ROOT MOTION
-        //if (animJugador != null)
-        //{
-        //    animJugador.applyRootMotion = false;
-        //    animJugador.SetFloat("Velocidad", 0f);
-        //}
 
         // FRENAR RIGIDBODY + KINEMATIC
         if (rbJugador != null)
         {
-            //rbJugador.velocity = Vector3.zero;
-            //rbJugador.angularVelocity = Vector3.zero;
-            rbJugador.isKinematic = true;   // 🔥 IMPORTANTE: evita que siga moviéndose
+            rbJugador.isKinematic = true;   // IMPORTANTE: evita que siga moviéndose
         }
 
         // ACTIVAR ANIMACIÓN DE CURACIÓN
@@ -67,6 +60,9 @@ public class Curacion : MonoBehaviour
         panelEnfermeria.SetActive(true);
 
         StartCoroutine(CerrarEnfermeria());
+
+        DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeCumpliEnfermeria);
+
     }
 
     private IEnumerator CerrarEnfermeria()

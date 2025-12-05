@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabExplosivo: {fileID: 2956385538671745233, guid: 8375f9e4db49426478c4cb8511eff852, type: 3}
-  tiempoParaInstanciar: 1
+  tiempoParaInstanciar: 0.5
   rangoVision: 20
   tiempoBusqueda: 3
   buscarAlLlegar: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   - {fileID: 0}
   spawnExplosivo1: {fileID: 3714263654591810085}
   spawnExplosivo2: {fileID: 2500414927389647793}
-  velocidad: 5
+  velocidad: 6
   velocidadAngular: 120
   distanciaMinima: 2
   enCooldown: 0
@@ -509,8 +509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3fa4ebf6ee9a164787583b77189c5c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaMaxima: 60
-  vidaActual: 60
+  vidaMaxima: 150
+  vidaActual: 150
   barraVida: {fileID: 171519628895963023}
 --- !u!1 &4749006378497163153
 GameObject:

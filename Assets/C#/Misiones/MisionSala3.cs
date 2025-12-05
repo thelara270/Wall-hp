@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static DialogoManager;
 
 // Clase que representa la misión correspondiente a la Sala 3,
 // donde el jugador debe ingresar un código correcto.
@@ -46,6 +47,8 @@ public class MisionSala3 : MisionBase
     {
         // Llama a la implementación base que marca la misión como completada.
         base.CompletarMision();
+        DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeCumplirMision3);
+
 
         // Se desuscribe del evento del generador para evitar duplicaciones.
         if (generadorCodigos != null)

@@ -1,29 +1,35 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class DesvanecerAlIniciar : MonoBehaviour
+public class DesvanecerPantalla : MonoBehaviour
 {
-    public float duracionFade = 1.5f;     // Duraci�n del fade
-    public float tiempoEspera = 1f;       // Tiempo antes de empezar a desvanecer
+    public float duracionFade = 1.5f;
     private Image imagenPantalla;
 
-    void Start()
+    private void Awake()
     {
         imagenPantalla = GetComponent<Image>();
-        StartCoroutine(FadeIn());
     }
 
-    IEnumerator FadeIn()
+    // -------------------------
+    // FADE IN (Pantalla negra → transparente)
+    // -------------------------
+    public void IniciarFadeIn(float tiempoEspera = 0f)
     {
-        // Mantener la pantalla negra para que el jugador se instancie
+        gameObject.SetActive(true);
+        StartCoroutine(FadeIn(tiempoEspera));
+    }
+
+    IEnumerator FadeIn(float tiempoEspera)
+    {
         yield return new WaitForSeconds(tiempoEspera);
 
         Color colorActual = imagenPantalla.color;
 
-        for (float tiempo = 0; tiempo < duracionFade; tiempo += Time.deltaTime)
+        for (float t = 0; t < duracionFade; t += Time.deltaTime)
         {
-            colorActual.a = Mathf.Lerp(1f, 0f, tiempo / duracionFade);
+            colorActual.a = Mathf.Lerp(1f, 0f, t / duracionFade);
             imagenPantalla.color = colorActual;
             yield return null;
         }
@@ -31,5 +37,31 @@ public class DesvanecerAlIniciar : MonoBehaviour
         colorActual.a = 0f;
         imagenPantalla.color = colorActual;
         gameObject.SetActive(false);
+    }
+
+    // -------------------------
+    // FADE OUT (Transparente → pantalla negra)
+    // -------------------------
+    public void IniciarFadeOut()
+    {
+        gameObject.SetActive(true);
+        StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut()
+    {
+        Color colorActual = imagenPantalla.color;
+
+        for (float t = 0; t < duracionFade; t += Time.deltaTime)
+        {
+            colorActual.a = Mathf.Lerp(0f, 1f, t / duracionFade);
+            imagenPantalla.color = colorActual;
+            yield return null;
+        }
+
+        colorActual.a = 1f;
+        imagenPantalla.color = colorActual;
+
+        // No se desactiva porque quieres que quede oscuro
     }
 }

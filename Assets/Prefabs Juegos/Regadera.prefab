@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2844407137953689209}
   - component: {fileID: 8248427105287058852}
   - component: {fileID: 1183182135498556702}
-  - component: {fileID: 1400129241732897381}
   m_Layer: 6
   m_Name: Regadera
   m_TagString: Regadera
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2461903244952276252}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 22.835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -101,33 +100,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!54 &1400129241732897381
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461903244952276252}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &7146009518910202033
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 025dd8381b2688b4e8beec8792fe4cbc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.316
+      value: -0.331
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 025dd8381b2688b4e8beec8792fe4cbc, type: 3}
       propertyPath: m_LocalRotation.w

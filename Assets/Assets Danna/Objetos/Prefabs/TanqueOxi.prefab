@@ -9,32 +9,44 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 125.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 125.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 125.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 131.43706
+      value: 146.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.30672
+      value: -2.2756
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.293001
+      value: 29.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00000001545431
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015454308
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071067
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -42,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       propertyPath: m_Name
@@ -58,15 +70,15 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5710496559257744691}
+      addedObject: {fileID: 1290306713562816809}
   m_SourcePrefab: {fileID: 100100000, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
 --- !u!1 &8268354242147936032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
   m_PrefabInstance: {fileID: 9114847704296413809}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &5710496559257744691
-MeshCollider:
+--- !u!65 &1290306713562816809
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -83,7 +95,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2534964839176971238, guid: 7e10e60a923b8e84c8117e0328bff41b, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.023182698, y: 0.024333786, z: 0.035293896}
+  m_Center: {x: -0.001341451, y: 0.00018733134, z: 0.002554262}

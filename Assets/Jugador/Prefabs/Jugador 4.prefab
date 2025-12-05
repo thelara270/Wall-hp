@@ -156,7 +156,7 @@ MonoBehaviour:
   distanciaMax: 4
   distanciaAIM: 2
   velocidadZoom: 10
-  altura: 4.3
+  altura: 4.93
   sensibilidadX: 100
   sensibilidadY: 100
   minY: -40
@@ -170,7 +170,7 @@ MonoBehaviour:
   canvasJugador: {fileID: 0}
   apuntando: 0
   offsetNormal: {x: 0, y: 0, z: 0}
-  offsetApuntar: {x: 1.57, y: 0.15, z: 0}
+  offsetApuntar: {x: 1.77, y: 0.15, z: 0}
   distanciaApuntar: 1.36
   suavidadCambioModo: 10
   suavidadMovimiento: 10
@@ -278,6 +278,14 @@ PrefabInstance:
     - target: {fileID: 2408533735805425299, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
       propertyPath: tamanoDeteccion.y
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787147465336689439, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
+      propertyPath: gravedadCaida
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787147465336689439, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
+      propertyPath: gravedadExtra
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8743369883926009863, guid: ae4fc8d7dd9555344acf29e0eae09dc1, type: 3}
       propertyPath: m_Mass

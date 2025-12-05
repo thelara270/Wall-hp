@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2995942041304005560}
   m_Layer: 0
   m_Name: Mano
-  m_TagString: Mano
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 853d2e23adf455f44aa0d9cc375bae17, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937743238928704016, guid: 853d2e23adf455f44aa0d9cc375bae17, type: 3}
+      propertyPath: m_TagString
+      value: Mano
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

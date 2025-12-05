@@ -1137,10 +1137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecffd79e225815747a70b6e625111e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadCuracion: 10
-  panelEnfermeria: {fileID: 0}
+  panelEnfermeria: {fileID: 1767206101}
   tiempoCierreAutomatico: 2
   gameManager: {fileID: 762398001}
+  animatorCuracion: {fileID: 1120086892}
 --- !u!65 &74594767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10624,6 +10624,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2142864974}
+        m_TargetAssemblyTypeName: Puertas, Assembly-CSharp
+        m_MethodName: DesbloquearPuerta
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &631312608
 Transform:
   m_ObjectHideFlags: 0
@@ -17015,6 +17027,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8311021842465294068, guid: e3997e8c2df154e4d92a0d5a56214967, type: 3}
   m_PrefabInstance: {fileID: 1120086890}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1120086892 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6726105029146128814, guid: e3997e8c2df154e4d92a0d5a56214967, type: 3}
+  m_PrefabInstance: {fileID: 1120086890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1124693421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20191,6 +20208,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1421868239}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 516014481}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27218,7 +27247,7 @@ GameObject:
   - component: {fileID: 1767206104}
   - component: {fileID: 1767206103}
   m_Layer: 5
-  m_Name: Enfermeria (integrar)
+  m_Name: Enfermeria Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32199,6 +32228,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135846345}
   m_CullTransparentMesh: 1
+--- !u!114 &2142864974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3733509423910588475, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
+  m_PrefabInstance: {fileID: 989935157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f0b62c05bd011458824c6673549ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2144459130
 GameObject:
   m_ObjectHideFlags: 0

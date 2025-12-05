@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZonaCodigo : MonoBehaviour
@@ -12,6 +11,8 @@ public class ZonaCodigo : MonoBehaviour
 
     private bool enRango;
     private bool ignoreNextE = false;
+
+    public GameManager gameManager;
 
     private void Update()
     {
@@ -31,12 +32,21 @@ public class ZonaCodigo : MonoBehaviour
 
             uiJugador.SetActive(false);
             panel.SetActive(true);
+
+            StartCoroutine(BloquearEscapeUnFrame());
         }
+    }
+
+    private IEnumerator BloquearEscapeUnFrame()
+    {
+        gameManager.bloqueoPausa = true;
+        yield return null;
     }
 
     public void DesactivarPanel()
     {
-        if (!panel.activeSelf) return;
+        if (!panel.activeSelf)
+            return;
 
         if (ignoreNextE)
         {
@@ -44,7 +54,8 @@ public class ZonaCodigo : MonoBehaviour
             return;
         }
 
-        if (bloqueoSalida) return;
+        if (bloqueoSalida)
+            return;
 
         if (Input.GetKeyDown(KeyCode.E))
             CerrarPanel();
@@ -57,6 +68,8 @@ public class ZonaCodigo : MonoBehaviour
 
         uiJugador.SetActive(true);
         panel.SetActive(false);
+
+        gameManager.bloqueoPausa = false;
     }
 
     private void OnTriggerEnter(Collider other)

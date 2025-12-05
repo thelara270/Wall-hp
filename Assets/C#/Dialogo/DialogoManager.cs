@@ -30,6 +30,11 @@ public class DialogoManager : MonoBehaviour
             DebeRepararCables,
             DebeAbrirMisiones,
             DebeCumplirMision1,
+            DebeCumplirMision2,
+            DebeCumpliEnfermeria,
+            DebeCumplirMision3,
+            DebeCumplirMision4,
+            DebeCumplirCafeteria
         }
 
         public Requisito requisito = Requisito.Ninguno;
@@ -76,7 +81,7 @@ public class DialogoManager : MonoBehaviour
     {
         if (!panelDialogo.activeSelf) return;
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (!textoCompleto)
             {
@@ -134,7 +139,7 @@ public class DialogoManager : MonoBehaviour
             );
 
             if (fraseObj.mostrarContinuar)
-                fraseProcesada += "\n\nPresiona Enter para continuar.";
+                fraseProcesada += "\n\nPresiona Q para continuar.";
 
             textoDialogo.text = "";
             textoCompleto = false;
@@ -174,7 +179,7 @@ public class DialogoManager : MonoBehaviour
         );
 
         if (fraseObj.mostrarContinuar)
-            fraseProcesada += "\n\nPresiona Enter para continuar.";
+            fraseProcesada += "\n\nPresiona Q para continuar.";
 
         textoDialogo.text = fraseProcesada;
         textoCompleto = true;

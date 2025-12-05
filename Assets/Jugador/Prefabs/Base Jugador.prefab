@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8688820232893782619}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.4860325, z: 0.00000008940697, w: 0.87394077}
-  m_LocalPosition: {x: 0.0036, y: -0.0065, z: 0.0025}
+  m_LocalRotation: {x: 0.000000089406974, y: -0.48603255, z: 0.00000005960465, w: 0.8739407}
+  m_LocalPosition: {x: 0.0010000078, y: -0.0051999977, z: -0.0016099918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -261,7 +261,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   iconosSlots: []
-  puntoMano: {fileID: 2995942041304005560}
+  puntoMano: {fileID: 4294894045962058299}
   objetoEnMano: {fileID: 0}
 --- !u!114 &4787147465336689439
 MonoBehaviour:

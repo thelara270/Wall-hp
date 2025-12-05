@@ -5,19 +5,16 @@ public class GameManager : MonoBehaviour
 {
     public static string escenaACargar;
 
-    // Panel de pausa asignado desde el Inspector
     public GameObject panelPausa;
-
-    // Variable interna para saber si el juego está pausado
-    private bool juegoPausado = false;
-
     public GameObject canvasHUD;
 
+    public bool bloqueoPausa = false;
+
+    private bool juegoPausado = false;
 
     private void Update()
     {
-        // Detectar si se presiona la tecla Escape
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !bloqueoPausa)
         {
             PausarJuego();
         }
@@ -42,34 +39,34 @@ public class GameManager : MonoBehaviour
 
     public void PausarJuego()
     {
+        if (bloqueoPausa)
+            return;
+
         if (juegoPausado)
         {
-            // Reanudar juego
             panelPausa.SetActive(false);
             canvasHUD.SetActive(true);
             Time.timeScale = 1f;
             juegoPausado = false;
 
-            Cursor.lockState = CursorLockMode.Locked; // Bloquear cursor
-            Cursor.visible = false;                   // Ocultar cursor
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         else
         {
-            // Pausar juego
             panelPausa.SetActive(true);
             canvasHUD.SetActive(false);
             Time.timeScale = 0f;
             juegoPausado = true;
 
-            Cursor.lockState = CursorLockMode.None;   // Liberar cursor
-            Cursor.visible = true;                    // Mostrar cursor
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
-    // ⚠️ ESTA FUNCIÓN ES PARA EL BOTÓN "REANUDAR" EN EL MENÚ DE PAUSA
     public void ReanudarDesdeBoton()
     {
-        PausarJuego(); // Reutilizamos la misma lógica
+        PausarJuego();
     }
 
     public void CerrarJuego()

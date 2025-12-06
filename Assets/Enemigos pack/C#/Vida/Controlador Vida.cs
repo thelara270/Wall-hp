@@ -23,6 +23,8 @@ public class ControladorVida : MonoBehaviour
 
     private float acumuladorCuracion = 0f;
 
+    public GameObject perder;
+
     void Start()
     {
         vidaActual = vidaMaxima;
@@ -115,6 +117,7 @@ public class ControladorVida : MonoBehaviour
         estaMuerto = true;
         Debug.Log("EL JUGADOR HA MUERTO");
         gameObject.SetActive(false);
+        perder.SetActive(true);
     }
 
     void ActualizarBarraVida()

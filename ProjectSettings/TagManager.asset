@@ -10,6 +10,7 @@ TagManager:
   - BarraVida
   - BarraVidaEnemigo
   - Mano
+  - Tarjeta
   layers:
   - Default
   - TransparentFX

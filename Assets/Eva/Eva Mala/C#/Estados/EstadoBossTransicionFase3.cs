@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static DialogoManager;
 
 public class EstadoBossTransicionFase3 : EstadoBoss
 {
@@ -10,6 +11,8 @@ public class EstadoBossTransicionFase3 : EstadoBoss
     {
         boss.SetAnimadorEstado(boss.idFase3);
         Debug.Log("¡¡ EVA entra en la FASE 3 !!");
+        DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.Fase2);
+
 
         // -----------------------------------
         // 🔥 ACTIVAR TORRETAS Y PONER RANGO 0

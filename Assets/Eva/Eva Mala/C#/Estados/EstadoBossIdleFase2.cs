@@ -1,4 +1,5 @@
 using UnityEngine;
+using static DialogoManager;
 
 public class EstadoBossIdleFase2 : EstadoBoss
 {
@@ -10,6 +11,7 @@ public class EstadoBossIdleFase2 : EstadoBoss
     {
         boss.SetAnimadorEstado(boss.idIdleFase2);
         tiempoIdle = boss.tiempoIdleF2;
+        DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.Fase1);
     }
 
     public override void ActualizarEstado()

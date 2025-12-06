@@ -39,7 +39,7 @@ public class NuevoMovimiento : MonoBehaviour
         Mover();
         Saltar();
         SaltoYCaida();
-        //SonidosMovimiento();   // 🔊 nuevo
+        SonidosMovimiento();   // 🔊 nuevo
     }
 
     void Mover()
@@ -79,6 +79,32 @@ public class NuevoMovimiento : MonoBehaviour
             DialogoManager.instancia?.CumplirRequisito(FraseDialogo.Requisito.DebeMoverse);
         }
     }
+
+    // 🔊 -----------------------------------------
+    // SONIDO DE CAMINAR / CORRER
+    // ---------------------------------------------
+    void SonidosMovimiento()
+    {
+        float velXZ = new Vector2(rb.velocity.x, rb.velocity.z).magnitude;
+        bool estaMoviendose = velXZ > 0.2f;
+        bool estaEnSuelo = EstaEnElSuelo();
+
+        if (estaMoviendose && estaEnSuelo)
+        {
+            // Ajustar pitch si corre
+            if (Input.GetKey(KeyCode.LeftShift))
+                AudioManager.instance.loopSource.pitch = 1.3f;
+            else
+                AudioManager.instance.loopSource.pitch = 1f;
+
+            AudioManager.instance.SonidoCaminar(true);
+        }
+        else
+        {
+            AudioManager.instance.SonidoCaminar(false);
+        }
+    }
+
 
     bool EstaEnElSuelo()
     {

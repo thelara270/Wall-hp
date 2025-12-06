@@ -15,7 +15,7 @@ public class ControladorVida : MonoBehaviour
     public int velocidadCuracion = 5;
 
     [Header("UI - Barra de Vida (Filled)")]
-    public Image barraVida;  // **Aquí en vez de Slider**
+    public Image barraVida; 
 
     private float tiempoSinDaño = 0f;
     private bool recibioDañoRecientemente = false;

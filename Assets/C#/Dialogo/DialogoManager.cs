@@ -34,7 +34,8 @@ public class DialogoManager : MonoBehaviour
             DebeCumpliEnfermeria,
             DebeCumplirMision3,
             DebeCumplirMision4,
-            DebeCumplirCafeteria
+            DebeCumplirCafeteria,
+            Fase1, Fase2, Fase3,
         }
 
         public Requisito requisito = Requisito.Ninguno;

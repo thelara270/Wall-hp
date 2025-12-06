@@ -6352,7 +6352,7 @@ MonoBehaviour:
   musicaMenu: {fileID: 8300000, guid: 92d0c3124df30d64d9fdbd0784f7ca3c, type: 3}
   musicaCinematica: {fileID: 8300000, guid: 918330c1ddaa6444ab842e4c8c885ba5, type: 3}
   musicaJuego: {fileID: 8300000, guid: 9ab50313bd65ff84da085fba95ae5228, type: 3}
-  caminar: {fileID: 8300000, guid: 54705e81ec4bb9949a34d1a6f83b26ba, type: 3}
+  caminar: {fileID: 8300000, guid: 24797465c65a18d46afea52dff8cbd23, type: 3}
   tomarObjeto: {fileID: 8300000, guid: 7b0f091fcf5455e43acfa472ee007809, type: 3}
   panelElectrico: {fileID: 8300000, guid: 532a03591d3e10948b70923656714595, type: 3}
   panelCarpetas: {fileID: 8300000, guid: a29cc3937c324e840845e532b6bf7235, type: 3}

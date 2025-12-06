@@ -3702,6 +3702,10 @@ MonoBehaviour:
       a la cafeter\xEDa y posteriormente al ascensor."
     mostrarContinuar: 1
     requisito: 11
+  - texto: Se desbloqueo la puerta de la cafeteria, busca la tarjeta de acceso para
+      el elevador
+    mostrarContinuar: 1
+    requisito: 12
   velocidadEscritura: 0.03
   eventosDialogo:
   - indice: 1
@@ -7642,6 +7646,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2240316852758103944, guid: 68acbfff16389094a842b9af69498d93, type: 3}
   m_PrefabInstance: {fileID: 362008446}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &367849902
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423099799014273206, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_Name
+      value: tarjeta
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549059511795098277, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.07047265
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549059511795098277, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549059511795098277, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_Size.z
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549059511795098277, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_Center.x
+      value: -0.003262263
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549059511795098277, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 104c585b8996163459737e66a1a128c9, type: 3}
 --- !u!1 &373946490
 GameObject:
   m_ObjectHideFlags: 0
@@ -14209,6 +14290,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4240429491037547437, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
   m_PrefabInstance: {fileID: 736457664}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &736457666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3733509423910588475, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
+  m_PrefabInstance: {fileID: 736457664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f0b62c05bd011458824c6673549ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &736471553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15795,6 +15887,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1444489193}
     m_Modifications:
     - target: {fileID: 1841570430582168065, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
+      propertyPath: puerta
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841570430582168065, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
       propertyPath: imagenUI
       value: 
       objectReference: {fileID: 1725535314}
@@ -15862,16 +15958,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puerta  (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3733509423910588475, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5570371126726895009, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 790236196}
   m_SourcePrefab: {fileID: 100100000, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
 --- !u!4 &790236194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4240429491037547437, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
   m_PrefabInstance: {fileID: 790236193}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &790236195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5570371126726895009, guid: 5ec7736a89141b143ae805a00a534c80, type: 3}
+  m_PrefabInstance: {fileID: 790236193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &790236196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790236195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54583e6bdd9f6d4091d001401a8010f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &793747540
 GameObject:
   m_ObjectHideFlags: 0
@@ -16928,16 +17045,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 762398001}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 5
+      - m_Target: {fileID: 736457666}
+        m_TargetAssemblyTypeName: Puertas, Assembly-CSharp
+        m_MethodName: DesbloquearPuerta
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Pruebas
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   puzzleManager: {fileID: 528333556}
@@ -42353,3 +42470,4 @@ SceneRoots:
   - {fileID: 620596631}
   - {fileID: 1135941085}
   - {fileID: 1642750355}
+  - {fileID: 367849902}

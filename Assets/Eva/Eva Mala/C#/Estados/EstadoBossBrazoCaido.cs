@@ -8,12 +8,15 @@ public class EstadoBossBrazoCaido : EstadoBoss
 
     public override void EntrarEstado()
     {
-        boss.SetAnimadorEstado(boss.idBrazoCaido);
-
         if (boss.zonaActiva != null)
             boss.zonaActiva.DesactivarZona();
 
         boss.brazoActual.DesactivarDaño();
+
+        if (boss.brazoActual == boss.brazoIzquierdo)
+            boss.SetAnimadorEstado(boss.idBrazoIzquierdoCaido);
+        else
+            boss.SetAnimadorEstado(boss.idBrazoDerechoCaido);
 
         tiempo = boss.tiempoBrazoCaido;
     }

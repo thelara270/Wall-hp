@@ -8,11 +8,6 @@ public class BrazoConVida : MonoBehaviour
     public bool destruido = false;
     public bool puedeRecibirDaño = false;
 
-    [Header("Animator")]
-    public Animator animadorBrazo;
-    public string triggerAtacar = "Atacar";
-    public string triggerCaer = "Caer";
-
     Collider col;
 
     void Start()
@@ -54,9 +49,6 @@ public class BrazoConVida : MonoBehaviour
         puedeRecibirDaño = false;
 
         if (col != null) col.enabled = false;
-
-        if (animadorBrazo != null)
-            animadorBrazo.SetTrigger(triggerCaer);
     }
 
     private void OnTriggerEnter(Collider other)

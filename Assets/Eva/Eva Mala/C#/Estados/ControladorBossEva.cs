@@ -38,7 +38,6 @@ public class ControladorBossEva : MonoBehaviour
     public BrazoConVida brazoIzquierdo;
     public BrazoConVida brazoDerecho;
 
-    // Estados
     private EstadoBossIdleFase2 estadoIdleFase2;
     private EstadoBossActivarZonaElectrificada estadoActivarZona;
     private EstadoBossAnimarBrazo estadoAnimarBrazo;
@@ -46,19 +45,22 @@ public class ControladorBossEva : MonoBehaviour
     private EstadoBossBrazoCaido estadoBrazoCaido;
     private EstadoBossTransicionFase3 estadoTransicionFase3;
 
-    // Variables compartidas
     [HideInInspector] public ZonaElectrificada zonaActiva;
     [HideInInspector] public BrazoConVida brazoActual;
 
     [Header("Animaciones Fase 2")]
     public int idIdleFase2 = 3;
     public int idActivarZona = 4;
-    public int idMoverBrazo = 5;
-    public int idBrazoDaño = 6;
-    public int idBrazoCaido = 7;
-    public int idFase3 = 8;
 
-    // ===== TIEMPOS CONFIGURABLES =====
+    public int idAtacarIzquierda = 5;
+    public int idAtacarDerecha = 6;
+
+    public int idBrazoIzquierdoCaido = 7;
+    public int idBrazoDerechoCaido = 8;
+
+    public int idBrazoDaño = 9;
+    public int idFase3 = 10;
+
     [Header("Fase 2 — Tiempos Configurables")]
     public float tiempoIdleF2 = 1.5f;
     public float tiempoActivacionZona = 1f;
@@ -68,7 +70,7 @@ public class ControladorBossEva : MonoBehaviour
 
     [HideInInspector] public bool ultimoAtaqueFueIzquierda = false;
 
-    // ---------- FASE 3 (láseres y torretas) ----------
+    // ---------- FASE 3 ----------
     [Header("Fase3 - Laser y Torretas")]
     public List<ZonaLaser> zonasLaserSecuenciales = new List<ZonaLaser>();
     public List<ZonaLaser> zonasLaserTodas = new List<ZonaLaser>();
@@ -86,30 +88,26 @@ public class ControladorBossEva : MonoBehaviour
     public int vidaActualF3;
 
     [Header("Animaciones Fase3 (IDs)")]
-    public int idLaserSecuencial = 9;
-    public int idLaserPotente = 10;
-    public int idTorretasActivas = 11;
-    public int idMuerteEva = 12;
+    public int idLaserSecuencial = 11;
+    public int idLaserPotente = 12;
+    public int idTorretasActivas = 13;
+    public int idMuerteEva = 14;
 
     [HideInInspector] public bool puedeRecibirDañoF3 = false;
 
-    // Estados fase3
     private EstadoBossLaserCombinado estadoLaserCombinado;
     private EstadoBossCansadaTorretas estadoCansadaTorretas;
     private EstadoBossMuerte estadoMuerte;
+
     public GameObject panelFinal;
-    
 
     void Start()
     {
-        // Fase 1
         estadoIdleFase1 = new EstadoBossIdleFase1(this);
         estadoSpawn911 = new EstadoBossSpawn911(this);
         estadoTransicionFase2 = new EstadoBossTransicionFase2(this);
-
         CambiarEstado(estadoIdleFase1);
 
-        // Fase 2
         estadoIdleFase2 = new EstadoBossIdleFase2(this);
         estadoActivarZona = new EstadoBossActivarZonaElectrificada(this);
         estadoAnimarBrazo = new EstadoBossAnimarBrazo(this);
@@ -117,12 +115,10 @@ public class ControladorBossEva : MonoBehaviour
         estadoBrazoCaido = new EstadoBossBrazoCaido(this);
         estadoTransicionFase3 = new EstadoBossTransicionFase3(this);
 
-        // Instancia estados Fase 3
         estadoLaserCombinado = new EstadoBossLaserCombinado(this);
         estadoCansadaTorretas = new EstadoBossCansadaTorretas(this);
         estadoMuerte = new EstadoBossMuerte(this);
 
-        // Inicializar vida F3 y HUD si existe
         vidaActualF3 = vidaMaximaF3;
         if (vidaBossEva != null) vidaBossEva.SetVidaMaxima(vidaMaximaF3);
     }
@@ -135,13 +131,12 @@ public class ControladorBossEva : MonoBehaviour
 
     public void CambiarEstado(EstadoBoss nuevoEstado)
     {
-        if (estadoActual != null)
-            estadoActual.SalirEstado();
+        if (estadoActual == nuevoEstado)
+            return; // Evita reiniciar el estado
 
+        estadoActual?.SalirEstado();
         estadoActual = nuevoEstado;
-
-        if (estadoActual != null)
-            estadoActual.EntrarEstado();
+        estadoActual.EntrarEstado();
     }
 
     public bool TodosLosPuntosDestruidos()
@@ -158,7 +153,6 @@ public class ControladorBossEva : MonoBehaviour
         panelFinal.SetActive(true);
     }
 
-    // =================== GETTERS ===================
     public EstadoBossIdleFase1 ObtenerIdleFase1() => estadoIdleFase1;
     public EstadoBossSpawn911 ObtenerSpawn911() => estadoSpawn911;
     public EstadoBossTransicionFase2 ObtenerTransicionFase2() => estadoTransicionFase2;
@@ -170,12 +164,10 @@ public class ControladorBossEva : MonoBehaviour
     public EstadoBossBrazoCaido GetEstadoBrazoCaido() => estadoBrazoCaido;
     public EstadoBossTransicionFase3 GetEstadoTransicionFase3() => estadoTransicionFase3;
 
-    // Getters Fase 3
     public EstadoBossLaserCombinado GetEstadoLaserCombinado() => estadoLaserCombinado;
     public EstadoBossCansadaTorretas GetEstadoCansadaTorretas() => estadoCansadaTorretas;
     public EstadoBossMuerte GetEstadoMuerte() => estadoMuerte;
 
-    // =================== ANIMADOR ===================
     public void SetAnimadorEstado(int valor)
     {
         if (animador != null)

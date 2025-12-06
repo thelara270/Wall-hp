@@ -8,14 +8,13 @@ public class EstadoBossAnimarBrazo : EstadoBoss
 
     public override void EntrarEstado()
     {
-        boss.SetAnimadorEstado(boss.idMoverBrazo);
+        // Usa el brazo que YA fue elegido en EstadoBossActivarZonaElectrificada
+        bool usarIzquierdo = boss.brazoActual == boss.brazoIzquierdo;
 
-        bool usarIzquierdo = boss.zonaActiva.ladoZona == ZonaElectrificada.LadoZona.Izquierda;
-
-        boss.brazoActual = usarIzquierdo ? boss.brazoIzquierdo : boss.brazoDerecho;
-
-        if (boss.brazoActual.animadorBrazo != null)
-            boss.brazoActual.animadorBrazo.SetTrigger(boss.brazoActual.triggerAtacar);
+        if (usarIzquierdo)
+            boss.SetAnimadorEstado(boss.idAtacarIzquierda);
+        else
+            boss.SetAnimadorEstado(boss.idAtacarDerecha);
 
         tiempo = boss.tiempoAnimacionBrazo;
     }

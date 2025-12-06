@@ -10,11 +10,9 @@ public class EstadoBossBrazoDaño : EstadoBoss
     {
         boss.SetAnimadorEstado(boss.idBrazoDaño);
 
-        // Apagar zona
         if (boss.zonaActiva != null)
             boss.zonaActiva.DesactivarZona();
 
-        // 🔥 Activar daño SOLO en este estado
         if (boss.brazoActual != null)
             boss.brazoActual.ActivarDaño();
 
@@ -25,15 +23,16 @@ public class EstadoBossBrazoDaño : EstadoBoss
     {
         tiempo -= Time.deltaTime;
 
+        // ✔ Solo si está destruido
         if (boss.brazoActual != null && boss.brazoActual.destruido)
         {
             boss.CambiarEstado(boss.GetEstadoBrazoCaido());
             return;
         }
 
+        // Si sigue vivo → volver a Idle Fase 2
         if (tiempo <= 0)
         {
-            // Desactivar daño
             if (boss.brazoActual != null)
                 boss.brazoActual.DesactivarDaño();
 

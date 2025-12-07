@@ -116,7 +116,7 @@ public class ControladorVida : MonoBehaviour
     {
         estaMuerto = true;
         Debug.Log("EL JUGADOR HA MUERTO");
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         perder.SetActive(true);
     }
 

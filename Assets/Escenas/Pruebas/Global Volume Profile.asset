@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   shadows:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.45033112}
-  midtones:
     m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0.026490066}
-  highlights:
+    m_Value: {x: 1, y: 1, z: 1, w: -0.01670182}
+  midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: 0.05396258}
+  highlights:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: -1}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -64,13 +64,13 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 1.8
   contrast:
     m_OverrideState: 1
-    m_Value: 22
+    m_Value: 100
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.8060145, g: 0.6367924, b: 1, a: 1}
+    m_Value: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 0

@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -649,9 +649,6 @@ MonoBehaviour:
   vidaActual: 50
   destruido: 0
   "puedeRecibirDa\xF1o": 0
-  animadorBrazo: {fileID: 4448392490945411351}
-  triggerAtacar: Atacar
-  triggerCaer: Caer
 --- !u!95 &4448392490945411351
 Animator:
   serializedVersion: 5
@@ -759,9 +756,11 @@ MonoBehaviour:
   brazoActual: {fileID: 0}
   idIdleFase2: 3
   idActivarZona: 4
-  idMoverBrazo: 5
+  idAtacarIzquierda: 5
+  idAtacarDerecha: 6
+  idBrazoIzquierdoCaido: 7
+  idBrazoDerechoCaido: 8
   "idBrazoDa\xF1o": 6
-  idBrazoCaido: 7
   idFase3: 8
   tiempoIdleF2: 3
   tiempoActivacionZona: 2
@@ -792,6 +791,7 @@ MonoBehaviour:
   idTorretasActivas: 11
   idMuerteEva: 12
   "puedeRecibirDa\xF1oF3": 0
+  panelFinal: {fileID: 0}
 --- !u!1 &9165674354241097841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8380157826906577798, guid: 19676ac9f46ac794982074c960b1f6ce, type: 3}
@@ -813,9 +813,6 @@ MonoBehaviour:
   vidaActual: 50
   destruido: 0
   "puedeRecibirDa\xF1o": 0
-  animadorBrazo: {fileID: 5611759702233630067}
-  triggerAtacar: Atacar
-  triggerCaer: Caer
 --- !u!95 &5611759702233630067
 Animator:
   serializedVersion: 5

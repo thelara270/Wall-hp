@@ -1568,6 +1568,7 @@ MonoBehaviour:
   - {fileID: 2376778205631367551}
   - {fileID: 7612376543354007469}
   botonReintentar: {fileID: 7199527269515355246}
+  zonaCodigo: {fileID: 0}
 --- !u!1 &7169813784629368028
 GameObject:
   m_ObjectHideFlags: 0

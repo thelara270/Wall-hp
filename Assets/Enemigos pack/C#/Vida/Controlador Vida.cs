@@ -118,6 +118,9 @@ public class ControladorVida : MonoBehaviour
         Debug.Log("EL JUGADOR HA MUERTO");
         //gameObject.SetActive(false);
         perder.SetActive(true);
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void ActualizarBarraVida()

@@ -46,6 +46,7 @@ public class Puertas : MonoBehaviour
     {
         puertaAbierta = true;
         animator.SetBool("Abrir", true);
+        AudioManager.instance.SonidoPuertas();
 
         // Se cerrará automáticamente después de X segundos
         Invoke(nameof(CerrarPuerta), tiempoParaCerrar);
@@ -53,6 +54,7 @@ public class Puertas : MonoBehaviour
 
     private void CerrarPuerta()
     {
+        AudioManager.instance.SonidoPuertas();
         puertaAbierta = false;
         animator.SetBool("Abrir", false);
     }

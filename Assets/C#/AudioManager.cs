@@ -25,10 +25,18 @@ public class AudioManager : MonoBehaviour
     public AudioClip servidores;
     public AudioClip digitarCodigo;
     public AudioClip rompecabezasColocar;
+    public AudioClip efectoPuertas;
 
-    [Header("UI Effects")]
+    [Header("Click")]
     public AudioClip uiHover;
     public AudioClip uiClick;
+
+    [Header("Enemigos")]
+    public AudioClip sirenaEnemigo;
+    public AudioClip explosionEnemigo;
+    public AudioClip detectarTorreta;
+    public AudioClip dispararTorreta;
+
 
     float musicVolume = 1f;
     float sfxVolume = 1f;
@@ -53,7 +61,7 @@ public class AudioManager : MonoBehaviour
         ApplyVolume();
     }
 
-    // ---------------- 🎵 MÚSICA ---------------------
+    // ---------------- MÚSICA ---------------------
 
     public void PlayMusic(AudioClip clip, bool loop = true)
     {
@@ -74,7 +82,7 @@ public class AudioManager : MonoBehaviour
     public void MusicaCinematica() => PlayMusic(musicaCinematica, false);
     public void MusicaJuego() => PlayMusic(musicaJuego, true);
 
-    // ---------------- 🔊 SFX -------------------------
+    // ---------------- SFX -------------------------
 
     public void PlaySFX(AudioClip clip)
     {
@@ -83,7 +91,7 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip, sfxVolume);
     }
 
-    // ---------------- 🔁 LOOP ------------------------
+    // ---------------- LOOP ------------------------
 
     public void PlayLoop(AudioClip clip)
     {
@@ -104,7 +112,7 @@ public class AudioManager : MonoBehaviour
             loopSource.Stop();
     }
 
-    // -------------- 🎮 ACCESOS DIRECTOS --------------
+    // -------------- ACCESOS DIRECTOS --------------
 
     public void SonidoCaminar(bool activo)
     {
@@ -122,13 +130,20 @@ public class AudioManager : MonoBehaviour
     public void DetenerServidores() => StopLoop();
     public void SonidoDigitarCodigo() => PlaySFX(digitarCodigo);
     public void SonidoRompecabezas() => PlaySFX(rompecabezasColocar);
+    public void SonidoPuertas() => PlaySFX(efectoPuertas);
 
-    // ----------- 🖱️ UI BUTTONS ----------------------
+    // ----------- Enemigos ----------------------
+    public void SonidoSirenaEnemigo() => PlaySFX(sirenaEnemigo);
+    public void SonidoExplosionEnemigo() => PlaySFX(explosionEnemigo);
+    public void SonidoDetectarTorreta() => PlaySFX(detectarTorreta);
+    public void SonidoDispararTorreta() => PlaySFX(dispararTorreta);
+
+    // ----------- UI BUTTONS ----------------------
 
     public void SonidoHoverUI() => PlaySFX(uiHover);
     public void SonidoClickUI() => PlaySFX(uiClick);
 
-    // ------------ 🔧 SLIDERS DE VOLUMEN ---------------
+    // ------------ SLIDERS DE VOLUMEN ---------------
 
     public void SetMusicVolume(float value)
     {
@@ -155,5 +170,17 @@ public class AudioManager : MonoBehaviour
 
         if (loopSource != null)
             loopSource.volume = sfxVolume;
+    }
+
+    public void PararTodo()
+    {
+        if (musicSource != null)
+            musicSource.Stop();
+
+        if (sfxSource != null)
+            sfxSource.Stop();
+
+        if (loopSource != null)
+            loopSource.Stop();
     }
 }

@@ -99,6 +99,8 @@ public class ControladorEnemigo : MonoBehaviour
 
         enCooldown = true;
         Invoke(nameof(ResetCooldown), 3f);
+        //AudioManager.instance.SonidoSirenaEnemigo(false);
+
     }
 
     void ResetCooldown() => enCooldown = false;
@@ -108,6 +110,7 @@ public class ControladorEnemigo : MonoBehaviour
         if (jugador == null) return false; // 🔹 Seguridad
 
         Vector3 dir = (jugador.position - transform.position).normalized;
+        //AudioManager.instance.SonidoSirenaEnemigo(true);
 
         if (Physics.Raycast(transform.position + Vector3.up, dir, out RaycastHit hit, rangoVision))
         {

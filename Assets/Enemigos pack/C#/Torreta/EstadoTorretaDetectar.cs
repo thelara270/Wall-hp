@@ -17,6 +17,8 @@ public class EstadoTorretaDetectar : EstadoTorreta
     {
         tiempo += Time.deltaTime;
         torreta.transform.LookAt(torreta.jugador);
+        AudioManager.instance.SonidoDetectarTorreta();
+
 
         if (tiempo >= torreta.tiempoAntesDeDisparar)
         {

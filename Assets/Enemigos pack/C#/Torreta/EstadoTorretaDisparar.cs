@@ -32,6 +32,8 @@ public class EstadoTorretaDisparar : EstadoTorreta
 
     void Disparar()
     {
+        AudioManager.instance.SonidoDispararTorreta();
+
         GameObject bala = PoolProyectiles.Instance.ObtenerBala();
         if (bala == null) return;
 

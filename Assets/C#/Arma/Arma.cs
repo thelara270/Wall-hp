@@ -20,6 +20,10 @@ public class Arma : MonoBehaviour
     public int cantidadPool = 20;
     private Queue<GameObject> poolBalas = new Queue<GameObject>();
 
+    [Header("Efectos Disparo")]
+    public AudioClip sonidoDisparo;
+    public ParticleSystem particulasDisparo;
+
 
     void Start()
     {
@@ -114,8 +118,14 @@ public class Arma : MonoBehaviour
 
     void Disparar()
     {
+
+
         GameObject bala = ObtenerBala();
         bala.transform.position = puntoDisparo.position;
+
+        if (particulasDisparo != null)
+            particulasDisparo.Play();
+        AudioManager.instance.PlaySFX(sonidoDisparo);
 
         Vector3 direccion;
 

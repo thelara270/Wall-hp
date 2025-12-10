@@ -9,6 +9,7 @@ public class EstadoEnemigoPerseguir : EstadoEnemigo
         enemigo.agent.isStopped = false;
         enemigo.animator.SetInteger("Estado", 2); // correr
         enemigo.tiempoPersiguiendo = 0f;
+        AudioManager.instance.SonidoSirenaEnemigo();
     }
 
     public override void Update()
@@ -33,6 +34,7 @@ public class EstadoEnemigoPerseguir : EstadoEnemigo
 
         if (enemigo.enCooldown)
         {
+            
             enemigo.ChangeState(enemigo.GetReturnState());
             return;
         }
@@ -42,6 +44,7 @@ public class EstadoEnemigoPerseguir : EstadoEnemigo
             enemigo.buscarAlLlegar = true;
             enemigo.InstanciarExplosivos();
             enemigo.ChangeState(enemigo.GetReturnState());
+            
         }
         else if (!enemigo.DetectarJugador())
         {
@@ -51,5 +54,8 @@ public class EstadoEnemigoPerseguir : EstadoEnemigo
         }
     }
 
-    public override void Exit() { }
+    public override void Exit()
+    {
+       
+    }
 }

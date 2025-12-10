@@ -6364,6 +6364,10 @@ MonoBehaviour:
   rompecabezasColocar: {fileID: 8300000, guid: ab0e2b817e0591243b93b35e21f8021d, type: 3}
   uiHover: {fileID: 8300000, guid: 73a819a218e83324da5c9f0c6aeb9d43, type: 3}
   uiClick: {fileID: 8300000, guid: ad346ea6d0b46c54da8436b616df3612, type: 3}
+  sirenaEnemigo: {fileID: 8300000, guid: a790f45f48b010a46abba9ce238adfbf, type: 3}
+  explosionEnemigo: {fileID: 8300000, guid: ab7955cec854f9c41af8d07a7eeb1e9c, type: 3}
+  detectarTorreta: {fileID: 8300000, guid: dd2fef8074ae8624d82394097ed0850e, type: 3}
+  dispararTorreta: {fileID: 8300000, guid: c3abe5f5b70429f4ebccd7757b1da062, type: 3}
 --- !u!4 &1298875337
 Transform:
   m_ObjectHideFlags: 0

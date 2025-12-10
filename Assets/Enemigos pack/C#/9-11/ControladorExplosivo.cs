@@ -64,6 +64,8 @@ public class ControladorExplosivo : MonoBehaviour
 
     public void Explode(bool dañarJugador = false)
     {
+        AudioManager.instance.SonidoExplosionEnemigo();
+
         Instantiate(particulasExplosion, transform.position, Quaternion.identity);
 
         if (dañarJugador && jugador != null)

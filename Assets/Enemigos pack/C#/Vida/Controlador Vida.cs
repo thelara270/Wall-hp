@@ -121,6 +121,7 @@ public class ControladorVida : MonoBehaviour
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        AudioManager.instance.PararTodo();
     }
 
     void ActualizarBarraVida()

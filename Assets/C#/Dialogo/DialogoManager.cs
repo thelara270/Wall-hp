@@ -18,7 +18,7 @@ public class DialogoManager : MonoBehaviour
         [TextArea]
         public string texto;
 
-        public bool mostrarContinuar = true;
+        public bool mostrarContinuar = false; // Ya no se usa Q
 
         public enum Requisito
         {
@@ -66,6 +66,7 @@ public class DialogoManager : MonoBehaviour
     [Header("Eventos del diálogo")]
     public List<EventoDialogo> eventosDialogo = new List<EventoDialogo>();
 
+
     void Awake()
     {
         if (instancia == null) instancia = this;
@@ -80,26 +81,7 @@ public class DialogoManager : MonoBehaviour
 
     void Update()
     {
-        if (!panelDialogo.activeSelf) return;
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (!textoCompleto)
-            {
-                CompletarTextoActual();
-            }
-            else
-            {
-                if (requisitoActual != FraseDialogo.Requisito.Ninguno && !requisitoCumplido)
-                {
-                    Debug.Log("Requisito no cumplido: " + requisitoActual);
-                    return;
-                }
-
-                requisitoCumplido = false;
-                MostrarSiguienteFrase();
-            }
-        }
+        // YA NO SE USA NINGUNA TECLA PARA AVANZAR
     }
 
     public void IniciarDialogo()
@@ -111,48 +93,46 @@ public class DialogoManager : MonoBehaviour
 
     public void MostrarSiguienteFrase()
     {
-        if (indice < frases.Length)
+        if (indice >= frases.Length)
         {
-            if (escribiendo != null)
-                StopCoroutine(escribiendo);
+            CerrarDialogo();
+            return;
+        }
 
-            FraseDialogo fraseObj = frases[indice];
+        if (escribiendo != null)
+            StopCoroutine(escribiendo);
 
-            requisitoActual = fraseObj.requisito;
+        FraseDialogo fraseObj = frases[indice];
 
-            if (requisitoActual == FraseDialogo.Requisito.Ninguno)
-            {
-                requisitoCumplido = true;
-            }
-            else if (requisitosPrevios.ContainsKey(requisitoActual))
-            {
-                requisitoCumplido = true;
-                Debug.Log("Requisito ya se había cumplido antes: " + requisitoActual);
-            }
-            else
-            {
-                requisitoCumplido = false;
-            }
+        requisitoActual = fraseObj.requisito;
 
-            string fraseProcesada = fraseObj.texto.Replace(
-                "{NOMBRE}",
-                DatosJugador.instancia != null ? DatosJugador.instancia.nombreJugador : "JUGADOR"
-            );
-
-            if (fraseObj.mostrarContinuar)
-                fraseProcesada += "\n\nPresiona Q para continuar.";
-
-            textoDialogo.text = "";
-            textoCompleto = false;
-
-            escribiendo = StartCoroutine(EscribirTexto(fraseProcesada));
-
-            EjecutarEventosDialogo(indice);
+        // Caso 1: No necesita requisito → avanzará automáticamente
+        if (requisitoActual == FraseDialogo.Requisito.Ninguno)
+        {
+            requisitoCumplido = true;
+        }
+        else if (requisitosPrevios.ContainsKey(requisitoActual))
+        {
+            // Caso 2: Ya se cumplió antes
+            requisitoCumplido = true;
         }
         else
         {
-            CerrarDialogo();
+            // Caso 3: Debe esperar a que se cumpla
+            requisitoCumplido = false;
         }
+
+        string fraseProcesada = fraseObj.texto.Replace(
+            "{NOMBRE}",
+            DatosJugador.instancia != null ? DatosJugador.instancia.nombreJugador : "JUGADOR"
+        );
+
+        textoDialogo.text = "";
+        textoCompleto = false;
+
+        escribiendo = StartCoroutine(EscribirTexto(fraseProcesada));
+
+        EjecutarEventosDialogo(indice);
     }
 
     IEnumerator EscribirTexto(string frase)
@@ -164,28 +144,14 @@ public class DialogoManager : MonoBehaviour
         }
 
         textoCompleto = true;
-        indice++;
-    }
 
-    void CompletarTextoActual()
-    {
-        if (escribiendo != null)
-            StopCoroutine(escribiendo);
-
-        FraseDialogo fraseObj = frases[Mathf.Clamp(indice, 0, frases.Length - 1)];
-
-        string fraseProcesada = fraseObj.texto.Replace(
-            "{NOMBRE}",
-            DatosJugador.instancia != null ? DatosJugador.instancia.nombreJugador : "JUGADOR"
-        );
-
-        if (fraseObj.mostrarContinuar)
-            fraseProcesada += "\n\nPresiona Q para continuar.";
-
-        textoDialogo.text = fraseProcesada;
-        textoCompleto = true;
-
-        indice++;
+        // Si NO requiere condición → avanzar
+        if (requisitoCumplido)
+        {
+            indice++;
+            MostrarSiguienteFrase();
+        }
+        // Si requiere condición → esperar a CumplirRequisito()
     }
 
     public void CumplirRequisito(FraseDialogo.Requisito tipo)
@@ -195,11 +161,19 @@ public class DialogoManager : MonoBehaviour
         if (tipo == requisitoActual)
         {
             requisitoCumplido = true;
-            Debug.Log("Requisito cumplido en el momento correcto: " + tipo);
+
+            Debug.Log("Requisito cumplido: " + tipo);
+
+            // Si ya terminó de escribirse → avanzar ahora
+            if (textoCompleto)
+            {
+                indice++;
+                MostrarSiguienteFrase();
+            }
         }
         else
         {
-            Debug.Log("Requisito registrado por adelantado: " + tipo);
+            Debug.Log("Requisito cumplido por adelantado: " + tipo);
         }
     }
 

@@ -80,12 +80,16 @@ public class EstadoBossLaserCombinado : EstadoBoss
                     // Activar siguiente y reiniciar tiempo
                     boss.zonasLaserSecuenciales[indice].ActivarZona();
                     tiempo = boss.tiempoPorZonaLaser;
+                    AudioManager.instance.SonidoLaserPequeño();
+
                 }
                 else
                 {
                     // Secuencia terminada → pasar a potente
                     faseInterna = 1;
                     tiempo = boss.tiempoLaserPotente;
+                    AudioManager.instance.SonidoLaserGrande();
+
 
                     // Activar todas las zonas para el ataque potente
                     if (boss.zonasLaserTodas != null)

@@ -32,7 +32,6 @@ public class EstadoTorretaDisparar : EstadoTorreta
 
     void Disparar()
     {
-        AudioManager.instance.SonidoDispararTorreta();
 
         GameObject bala = PoolProyectiles.Instance.ObtenerBala();
         if (bala == null) return;
@@ -40,6 +39,7 @@ public class EstadoTorretaDisparar : EstadoTorreta
         bala.transform.position = torreta.puntoDisparo.position;
         bala.transform.rotation = torreta.puntoDisparo.rotation;
         bala.SetActive(true); // 🔹 ACTIVAR AL FINAL
+        AudioManager.instance.SonidoDispararTorreta();
     }
 
     public override void Exit() { }

@@ -17,6 +17,8 @@ public class EstadoBossAnimarBrazo : EstadoBoss
             boss.SetAnimadorEstado(boss.idAtacarDerecha);
 
         tiempo = boss.tiempoAnimacionBrazo;
+        AudioManager.instance.SonidoPegarEva();
+
     }
 
     public override void ActualizarEstado()

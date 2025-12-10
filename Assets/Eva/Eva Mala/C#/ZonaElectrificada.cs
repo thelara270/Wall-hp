@@ -63,6 +63,8 @@ public class ZonaElectrificada : MonoBehaviour
         {
             particulas.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             particulas.Play(true);
+            AudioManager.instance.SonidoElectricidadEva();
+
         }
 
         Debug.Log("Zona ACTIVADA: " + name);

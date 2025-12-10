@@ -37,6 +37,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip detectarTorreta;
     public AudioClip dispararTorreta;
 
+    [Header("EVA")]
+    public AudioClip laserPequeño;
+    public AudioClip laserGrande;
+    public AudioClip caerBrazo;
+    public AudioClip pegarEva;
+    public AudioClip electricidadEva;
 
     float musicVolume = 1f;
     float sfxVolume = 1f;
@@ -137,6 +143,13 @@ public class AudioManager : MonoBehaviour
     public void SonidoExplosionEnemigo() => PlaySFX(explosionEnemigo);
     public void SonidoDetectarTorreta() => PlaySFX(detectarTorreta);
     public void SonidoDispararTorreta() => PlaySFX(dispararTorreta);
+
+    // ----------- EVA ----------------------
+    public void SonidoLaserPequeño() => PlaySFX(laserPequeño);
+    public void SonidoLaserGrande() => PlaySFX(laserGrande);
+    public void SonidoCaerBrazo() => PlaySFX(caerBrazo);
+    public void SonidoPegarEva() => PlaySFX(pegarEva);
+    public void SonidoElectricidadEva() => PlaySFX(electricidadEva);
 
     // ----------- UI BUTTONS ----------------------
 

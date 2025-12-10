@@ -19,6 +19,8 @@ public class EstadoBossBrazoCaido : EstadoBoss
             boss.SetAnimadorEstado(boss.idBrazoDerechoCaido);
 
         tiempo = boss.tiempoBrazoCaido;
+        AudioManager.instance.SonidoCaerBrazo();
+
     }
 
     public override void ActualizarEstado()

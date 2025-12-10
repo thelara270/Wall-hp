@@ -7,7 +7,7 @@ public class Puertas : MonoBehaviour
     [Header("Configuración")]
     public string tagJugador = "Player";
     public float tiempoParaCerrar = 3f;
-    public bool bloqueada = true;   // <<< NUEVO — si está true NO se abre
+    public bool bloqueada = true; 
 
     private bool jugadorDentro = false;
     private bool puertaAbierta = false;
@@ -54,9 +54,15 @@ public class Puertas : MonoBehaviour
 
     private void CerrarPuerta()
     {
-        AudioManager.instance.SonidoPuertas();
+        Invoke(nameof(SonidoCerrarPuerta), 0.8f);
+
         puertaAbierta = false;
         animator.SetBool("Abrir", false);
+    }
+
+    private void SonidoCerrarPuerta()
+    {
+        AudioManager.instance.SonidoPuertas();
     }
 
     public void DesbloquearPuerta()

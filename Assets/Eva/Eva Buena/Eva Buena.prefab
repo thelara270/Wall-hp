@@ -127,7 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagJugador: Player
-  distanciaMinima: 5
+  distanciaMinima: 3
   distanciaExtra: 0.5
-  velocidad: 8
+  velocidad: 12
   rotacionSuave: 8
+  radioEntrada: 2
+  radioSalida: 3
+  alturaSphere: 1
+  distanciaAlejar: 6

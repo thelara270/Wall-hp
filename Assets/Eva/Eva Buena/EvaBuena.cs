@@ -1,18 +1,26 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class EvaBuena : MonoBehaviour
 {
-    [Header("Configuraci�n")]
+    [Header("Configuración")]
     public string tagJugador = "Player";
     public float distanciaMinima = 2f;
-    public float distanciaExtra = 0.5f;  // evita que quede pegada
+    public float distanciaExtra = 0.5f;
     public float velocidad = 3.5f;
     public float rotacionSuave = 8f;
+
+    [Header("Detección de proximidad (con histéresis)")]
+    public float radioEntrada = 1.2f;    // entra en modo alejarse
+    public float radioSalida = 1.8f;     // sale del modo solo cuando está lo bastante lejos
+    public float alturaSphere = 1.0f;
+    public float distanciaAlejar = 3f;
 
     private Transform jugador;
     private NavMeshAgent agente;
     private Animator anim;
+
+    private bool jugadorDemasiadoCerca = false;
 
     void Start()
     {
@@ -21,9 +29,7 @@ public class EvaBuena : MonoBehaviour
 
         agente.speed = velocidad;
         agente.stoppingDistance = distanciaMinima + distanciaExtra;
-        agente.autoBraking = true;        // evita deslizamiento
-        agente.updateRotation = false;    // rotaci�n manual
-        agente.acceleration = 50f;        // frena m�s r�pido
+        agente.updateRotation = false;
 
         BuscarJugador();
     }
@@ -36,7 +42,13 @@ public class EvaBuena : MonoBehaviour
             return;
         }
 
-        SeguirJugador();
+        DetectarProximidad();
+
+        if (jugadorDemasiadoCerca)
+            AlejarseDelJugador();
+        else
+            SeguirJugador();
+
         RotacionSuave();
     }
 
@@ -47,6 +59,39 @@ public class EvaBuena : MonoBehaviour
             jugador = obj.transform;
     }
 
+    // -----------------------------------------
+    // DETECCIÓN CON 2 RADIOS (evita el ciclo)
+    // -----------------------------------------
+    void DetectarProximidad()
+    {
+        Vector3 pos = transform.position + Vector3.up * alturaSphere;
+        float dist = Vector3.Distance(pos, jugador.position);
+
+        if (!jugadorDemasiadoCerca)
+        {
+            // Aún no está marcado como cerca → verifica si entra
+            if (dist <= radioEntrada)
+                jugadorDemasiadoCerca = true;
+        }
+        else
+        {
+            // Ya está marcado como cerca → solo sale cuando se aleja más
+            if (dist >= radioSalida)
+                jugadorDemasiadoCerca = false;
+        }
+    }
+
+    void AlejarseDelJugador()
+    {
+        Vector3 direccion = (transform.position - jugador.position).normalized;
+        Vector3 destino = transform.position + direccion * distanciaAlejar;
+
+        agente.SetDestination(destino);
+
+        if (anim != null)
+            anim.SetBool("Caminando", true);
+    }
+
     void SeguirJugador()
     {
         float distancia = Vector3.Distance(transform.position, jugador.position);
@@ -54,16 +99,12 @@ public class EvaBuena : MonoBehaviour
         if (distancia > distanciaMinima + distanciaExtra)
         {
             agente.SetDestination(jugador.position);
-
-            if (anim != null)
-                anim.SetBool("Caminando", true);
+            anim?.SetBool("Caminando", true);
         }
         else
         {
             agente.ResetPath();
-
-            if (anim != null)
-                anim.SetBool("Caminando", false);
+            anim?.SetBool("Caminando", false);
         }
     }
 
@@ -75,11 +116,17 @@ public class EvaBuena : MonoBehaviour
         if (vel.sqrMagnitude > 0.01f)
         {
             Quaternion rot = Quaternion.LookRotation(vel);
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation,
-                rot,
-                Time.deltaTime * rotacionSuave
-            );
+            transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * rotacionSuave);
         }
+    }
+
+    // Gizmos
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position + Vector3.up * alturaSphere, radioEntrada);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position + Vector3.up * alturaSphere, radioSalida);
     }
 }

@@ -54,9 +54,10 @@ public class Temporizador : MonoBehaviour
     {
         hud.SetActive(false);
         Debug.Log("⏰ ¡Tiempo terminado!");
+        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Time.timeScale = 0f;
+        AudioManager.instance.PararTodo();
         if (objetoActivar != null)
             objetoActivar.SetActive(true);
     }

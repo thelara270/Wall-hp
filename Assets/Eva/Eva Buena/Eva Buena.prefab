@@ -131,7 +131,7 @@ MonoBehaviour:
   distanciaExtra: 0.5
   velocidad: 12
   rotacionSuave: 8
-  radioEntrada: 2
-  radioSalida: 3
+  radioEntrada: 3
+  radioSalida: 4
   alturaSphere: 1
   distanciaAlejar: 6

@@ -11,6 +11,7 @@ TagManager:
   - BarraVidaEnemigo
   - Mano
   - Tarjeta
+  - Perder
   layers:
   - Default
   - TransparentFX

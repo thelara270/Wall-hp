@@ -22,7 +22,15 @@ public class Bala : MonoBehaviour
         tiempoDestruir = Time.time + vida;
 
         transform.rotation = Quaternion.LookRotation(dir);
+
+        // IGNORAR EL COLLIDER DEL JUGADOR
+        Collider colBala = GetComponent<Collider>();
+        Collider colJugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>();
+
+        if (colBala != null && colJugador != null)
+            Physics.IgnoreCollision(colBala, colJugador, true);
     }
+
 
     void Update()
     {

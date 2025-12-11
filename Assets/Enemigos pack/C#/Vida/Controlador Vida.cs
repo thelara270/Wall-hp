@@ -15,7 +15,7 @@ public class ControladorVida : MonoBehaviour
     public int velocidadCuracion = 5;
 
     [Header("UI - Barra de Vida (Filled)")]
-    public Image barraVida; 
+    public Image barraVida;
 
     private float tiempoSinDaño = 0f;
     private bool recibioDañoRecientemente = false;
@@ -23,12 +23,14 @@ public class ControladorVida : MonoBehaviour
 
     private float acumuladorCuracion = 0f;
 
-    public GameObject perder;
+    [Header("UI - Pantalla de Muerte")]
+    public GameObject perder; // Canvas de muerte
 
     void Start()
     {
         vidaActual = vidaMaxima;
 
+        // Buscar barra de vida por TAG
         if (barraVida == null)
         {
             GameObject barraObj = GameObject.FindGameObjectWithTag("BarraVida");
@@ -39,6 +41,27 @@ public class ControladorVida : MonoBehaviour
             else
             {
                 Debug.LogWarning("⚠ No se encontró ningún objeto con el tag 'BarraVida'");
+            }
+        }
+
+        if (perder == null)
+        {
+            // Buscar entre TODOS los GameObjects, incluidos inactivos
+            GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+
+            foreach (GameObject obj in allObjects)
+            {
+                if (obj.CompareTag("Perder"))
+                {
+                    perder = obj;
+                    Debug.Log("✔ Canvas de muerte encontrado incluso estando desactivado.");
+                    break;
+                }
+            }
+
+            if (perder == null)
+            {
+                Debug.LogWarning("⚠ No se encontró ningún objeto con el tag 'Perder'.");
             }
         }
 
@@ -116,8 +139,12 @@ public class ControladorVida : MonoBehaviour
     {
         estaMuerto = true;
         Debug.Log("EL JUGADOR HA MUERTO");
-        //gameObject.SetActive(false);
-        perder.SetActive(true);
+
+        if (perder != null)
+            perder.SetActive(true);
+        else
+            Debug.LogError("❌ No se puede activar 'perder' porque no se encontró por TAG");
+
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

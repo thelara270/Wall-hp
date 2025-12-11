@@ -1744,7 +1744,7 @@ MonoBehaviour:
   tiempoParaComenzarCurar: 5
   velocidadCuracion: 5
   barraVida: {fileID: 0}
-  perder: {fileID: 2647365413553788042}
+  perder: {fileID: 0}
 --- !u!4 &4294894045962058299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5862301646442178157, guid: 853d2e23adf455f44aa0d9cc375bae17, type: 3}

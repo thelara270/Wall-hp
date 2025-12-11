@@ -46,8 +46,11 @@ public class Arma : MonoBehaviour
 
         if (Input.GetMouseButton(0) && Time.time > tiempoDisparo)
         {
-            Disparar();
-            tiempoDisparo = Time.time + cadencia;
+            if (camaraTercera != null && camaraTercera.apuntando)   // ← SOLO dispara si apunta
+            {
+                Disparar();
+                tiempoDisparo = Time.time + cadencia;
+            }
         }
     }
 

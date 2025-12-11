@@ -11,8 +11,8 @@ public class EvaBuena : MonoBehaviour
     public float rotacionSuave = 8f;
 
     [Header("Detección de proximidad (con histéresis)")]
-    public float radioEntrada = 1.2f;    // entra en modo alejarse
-    public float radioSalida = 1.8f;     // sale del modo solo cuando está lo bastante lejos
+    public float radioEntrada = 1.2f;
+    public float radioSalida = 1.8f;
     public float alturaSphere = 1.0f;
     public float distanciaAlejar = 3f;
 
@@ -50,6 +50,7 @@ public class EvaBuena : MonoBehaviour
             SeguirJugador();
 
         RotacionSuave();
+        ActualizarAnimacion();  // <<--- NUEVO
     }
 
     void BuscarJugador()
@@ -59,9 +60,6 @@ public class EvaBuena : MonoBehaviour
             jugador = obj.transform;
     }
 
-    // -----------------------------------------
-    // DETECCIÓN CON 2 RADIOS (evita el ciclo)
-    // -----------------------------------------
     void DetectarProximidad()
     {
         Vector3 pos = transform.position + Vector3.up * alturaSphere;
@@ -69,13 +67,11 @@ public class EvaBuena : MonoBehaviour
 
         if (!jugadorDemasiadoCerca)
         {
-            // Aún no está marcado como cerca → verifica si entra
             if (dist <= radioEntrada)
                 jugadorDemasiadoCerca = true;
         }
         else
         {
-            // Ya está marcado como cerca → solo sale cuando se aleja más
             if (dist >= radioSalida)
                 jugadorDemasiadoCerca = false;
         }
@@ -87,25 +83,22 @@ public class EvaBuena : MonoBehaviour
         Vector3 destino = transform.position + direccion * distanciaAlejar;
 
         agente.SetDestination(destino);
-
-        if (anim != null)
-            anim.SetBool("Caminando", true);
     }
 
     void SeguirJugador()
     {
         float distancia = Vector3.Distance(transform.position, jugador.position);
 
-        if (distancia > distanciaMinima + distanciaExtra)
-        {
-            agente.SetDestination(jugador.position);
-            anim?.SetBool("Caminando", true);
-        }
-        else
+        if (distancia <= distanciaMinima)
         {
             agente.ResetPath();
-            anim?.SetBool("Caminando", false);
+            return;
         }
+
+        Vector3 direccion = (transform.position - jugador.position).normalized;
+        Vector3 destino = jugador.position + direccion * distanciaMinima;
+
+        agente.SetDestination(destino);
     }
 
     void RotacionSuave()
@@ -120,7 +113,14 @@ public class EvaBuena : MonoBehaviour
         }
     }
 
-    // Gizmos
+    // 🔥 NUEVO: animación basada SOLO en velocidad real
+    void ActualizarAnimacion()
+    {
+        float vel = agente.velocity.magnitude;
+        bool estaCaminando = vel > 0.1f;
+        anim.SetBool("Caminando", estaCaminando);
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

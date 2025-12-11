@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08be88dcbdb640043ba7605ccba07408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoTotal: 120
+  tiempoTotal: 300
   textoTemporizador: {fileID: 1562616693}
   objetoActivar: {fileID: 1093510777}
   hud: {fileID: 172718219}
@@ -8156,6 +8156,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 421271093843192670, guid: 104c585b8996163459737e66a1a128c9, type: 3}
+      propertyPath: escenaACargar
+      value: ComicEva
+      objectReference: {fileID: 0}
     - target: {fileID: 2651102364383357452, guid: 104c585b8996163459737e66a1a128c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.64

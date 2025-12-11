@@ -73,4 +73,10 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void MostrarMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 }

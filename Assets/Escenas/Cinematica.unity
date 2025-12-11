@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 46088441}
-  nombreEscenaDestino: Juego
+  nombreEscenaDestino: ComicInicio
   fade: {fileID: 1271303001}
   fadeAntesDeFinal: 5
 --- !u!328 &46088441
@@ -164,7 +164,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46088439}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: c69f9126e6467d74595eb47612468907, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 15bdc2cab63e12845ae8a8c3276b548e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1488798421}
@@ -301,7 +301,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Juego
+          m_StringArgument: ComicInicio
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2099275485}

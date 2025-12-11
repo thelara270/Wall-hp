@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControladorBossEva : MonoBehaviour
 {
@@ -93,6 +94,8 @@ public class ControladorBossEva : MonoBehaviour
     public int idTorretasActivas = 13;
     public int idMuerteEva = 14;
 
+    public string escenaACargar;
+
     [HideInInspector] public bool puedeRecibirDañoF3 = false;
 
     private EstadoBossLaserCombinado estadoLaserCombinado;
@@ -150,7 +153,15 @@ public class ControladorBossEva : MonoBehaviour
 
     public void EvaMurio()
     {
-        panelFinal.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Invoke(nameof(ComicFinal), 4f);
+    }
+
+    public void ComicFinal()
+    {
+        SceneManager.LoadScene(escenaACargar);
+
     }
 
     public EstadoBossIdleFase1 ObtenerIdleFase1() => estadoIdleFase1;

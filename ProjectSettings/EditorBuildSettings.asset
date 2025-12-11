@@ -15,9 +15,18 @@ EditorBuildSettings:
     path: Assets/Escenas/Cinematica.unity
     guid: 7644bae9e47b1574c8e74be42232b2d7
   - enabled: 1
+    path: Assets/Escenas/ComicInicio.unity
+    guid: 4213eddd2b2b05941bd059a90e146a61
+  - enabled: 1
     path: Assets/Escenas/Juego.unity
     guid: e24191f1acdd0ab48bc9b86dfd909546
   - enabled: 1
+    path: Assets/Escenas/ComicEva.unity
+    guid: 3f48ed92adc370543826e2bd56a63c2d
+  - enabled: 1
     path: Assets/Escenas/Pruebas.unity
     guid: 52b95999a7a52eb4094d8156bbf35228
+  - enabled: 1
+    path: Assets/Escenas/ComicFinal.unity
+    guid: 9e4682b24cb62a2418819ad50f6a4bd4
   m_configObjects: {}

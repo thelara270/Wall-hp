@@ -9,6 +9,8 @@ public class Tarjeta : ObjetoInteractuable
 
     public void UsarTarjeta(string sceneName)
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(escenaACargar);
     }
 }

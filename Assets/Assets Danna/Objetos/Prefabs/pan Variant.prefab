@@ -14,87 +14,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 238.75119
+      value: 620.52094
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 238.75119
+      value: 620.52094
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 238.75119
+      value: 620.5208
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -65.733
+      value: 26.079
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.62913
+      value: -3.185
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 34.282
+      value: 54.558
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8091535
+      value: 0.9966423
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.052987713
+      value: -0.011716715
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5805242
+      value: -0.0805078
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.07385597
+      value: 0.009243761
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -1.253
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -71.315
+      value: -9.249
       objectReference: {fileID: 0}
     - target: {fileID: 3285777612255632225, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -10.431
+      value: 1.164
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3281465914381856127, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1774213523823520488}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
---- !u!1 &5811247141455179735 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3281465914381856127, guid: d69cd731b9b70c44798b6a81b9d8245a, type: 3}
-  m_PrefabInstance: {fileID: 9020615085876888232}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1774213523823520488
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5811247141455179735}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.001312176, y: 0.0014311926, z: 0.0025857694}
-  m_Center: {x: 0.0000000013716692, y: 0.0000061444916, z: -0.0001240583}

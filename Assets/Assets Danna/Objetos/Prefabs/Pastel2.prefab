@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8824233723187084818}
   - component: {fileID: 2859527126684951673}
   - component: {fileID: 2794660236200180808}
-  - component: {fileID: 5316740576363539342}
   m_Layer: 0
   m_Name: Pastel2
   m_TagString: Untagged
@@ -27,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3067234216628857184}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.65328145, y: -0.27059805, z: -0.27059802, w: 0.65328157}
+  m_LocalRotation: {x: -0.6532815, y: -0.27059805, z: -0.27059805, w: 0.6532815}
   m_LocalPosition: {x: 28.016565, y: 1.8238888, z: 63.465115}
-  m_LocalScale: {x: 150.1253, y: 150.12534, z: 150.12532}
+  m_LocalScale: {x: 150.1253, y: 150.12532, z: 150.1253}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -45}
 --- !u!33 &2859527126684951673
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -86,24 +85,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5316740576363539342
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3067234216628857184}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.003932381, y: 0.005818633, z: 0.0029382836}
-  m_Center: {x: -0.0012303243, y: -0.0012773637, z: -0.00033098692}

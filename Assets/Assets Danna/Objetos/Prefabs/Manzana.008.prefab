@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 294819944081339969}
   - component: {fileID: 1680797579030057222}
   - component: {fileID: 1300708542299909817}
-  - component: {fileID: 1181853849029004987}
   m_Layer: 0
   m_Name: Manzana.008
   m_TagString: Untagged
@@ -27,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3007613633318625840}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.65328157, y: -0.27059802, z: -0.27059805, w: 0.65328145}
+  m_LocalRotation: {x: -0.6532815, y: -0.27059805, z: -0.27059805, w: 0.6532815}
   m_LocalPosition: {x: 36.01916, y: 2.0074272, z: 55.714603}
   m_LocalScale: {x: 620.5209, y: 620.5209, z: 620.5209}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -45}
 --- !u!33 &1680797579030057222
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -86,24 +85,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1181853849029004987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007613633318625840}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0011933901, y: 0.0011933905, z: 0.0013748421}
-  m_Center: {x: 0.000016938815, y: -0.000040656378, z: -0.00013090245}

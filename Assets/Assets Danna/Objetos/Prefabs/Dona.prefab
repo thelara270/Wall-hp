@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7933271679946676381}
   - component: {fileID: 3169365778364399162}
   - component: {fileID: 947896392026627126}
-  - component: {fileID: 7483548606037623969}
   m_Layer: 0
   m_Name: Dona
   m_TagString: Untagged
@@ -29,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.6532815, y: -0.27059805, z: -0.27059805, w: 0.6532815}
   m_LocalPosition: {x: 20.78, y: 3.1, z: 71.54}
-  m_LocalScale: {x: 432.7456, y: 432.7456, z: 432.7456}
+  m_LocalScale: {x: 432.7456, y: 432.7456, z: 432.74564}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,24 +84,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7483548606037623969
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7064326906692562003}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0023089885, y: 0.0023089894, z: 0.00076966325}
-  m_Center: {x: -5.820766e-11, y: -0.0000000037252903, z: 3.171815e-18}

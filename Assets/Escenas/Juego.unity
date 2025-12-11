@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Silla3Negra
       objectReference: {fileID: 0}
+    - target: {fileID: 4578481010496528603, guid: f5313ea00a4f22e4c8dbb4614676b2d8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2205,6 +2209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaControol
       objectReference: {fileID: 0}
+    - target: {fileID: 8987430016470717085, guid: 26c06728921d1e0439d29761723d7290, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2499,6 +2507,10 @@ PrefabInstance:
     - target: {fileID: 5817599918155812565, guid: 9c95810500023a94981ed4aa20d09436, type: 3}
       propertyPath: m_Name
       value: Zona Codigo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817599918155812565, guid: 9c95810500023a94981ed4aa20d09436, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7284145351019330319, guid: 9c95810500023a94981ed4aa20d09436, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -3305,10 +3317,6 @@ PrefabInstance:
     - target: {fileID: 7064326906692562003, guid: 96b756e226a346045a99eb9a2c86040b, type: 3}
       propertyPath: m_Name
       value: Dona
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933271679946676381, guid: 96b756e226a346045a99eb9a2c86040b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 432.74564
       objectReference: {fileID: 0}
     - target: {fileID: 7933271679946676381, guid: 96b756e226a346045a99eb9a2c86040b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5055,6 +5063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: camilla (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4218719774869016359, guid: 386914bc4df91c345b0add35e6412f1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5672,6 +5684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cajones
       objectReference: {fileID: 0}
+    - target: {fileID: 2047159177095966297, guid: 7aea50fe39e49334c8c9b9e0528a98fb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5977,7 +5993,7 @@ GameObject:
   - component: {fileID: 256728225}
   - component: {fileID: 256728224}
   - component: {fileID: 256728223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icono Enfermeria 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6063,18 +6079,6 @@ PrefabInstance:
     - target: {fileID: 5811247141455179735, guid: 3cd6c9cf688ed6f418d358a5cbaead75, type: 3}
       propertyPath: m_Name
       value: pan (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5816052524340566473, guid: 3cd6c9cf688ed6f418d358a5cbaead75, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 620.52094
-      objectReference: {fileID: 0}
-    - target: {fileID: 5816052524340566473, guid: 3cd6c9cf688ed6f418d358a5cbaead75, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 620.52094
-      objectReference: {fileID: 0}
-    - target: {fileID: 5816052524340566473, guid: 3cd6c9cf688ed6f418d358a5cbaead75, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 620.5208
       objectReference: {fileID: 0}
     - target: {fileID: 5816052524340566473, guid: 3cd6c9cf688ed6f418d358a5cbaead75, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8668,6 +8672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Silla4Roja
       objectReference: {fileID: 0}
+    - target: {fileID: 2528984949838378074, guid: cb73b7e593aeab541914c179f7a348ac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2905686822772059872, guid: cb73b7e593aeab541914c179f7a348ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.1562004
@@ -8999,6 +9007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Micro
       objectReference: {fileID: 0}
+    - target: {fileID: 2647516179015505599, guid: bf8b376a77aeb484e9c6178d8be958d5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3455964455289080837, guid: bf8b376a77aeb484e9c6178d8be958d5, type: 3}
       propertyPath: m_LocalScale.x
       value: 109.72001
@@ -9112,6 +9124,10 @@ PrefabInstance:
     - target: {fileID: 8987430016470717085, guid: 26c06728921d1e0439d29761723d7290, type: 3}
       propertyPath: m_Name
       value: MesaControol (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987430016470717085, guid: 26c06728921d1e0439d29761723d7290, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10474,6 +10490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zona Fusible (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0c33f39a170962479d8a259a18e03d2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -10905,6 +10925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zona Codigo pner
       objectReference: {fileID: 0}
+    - target: {fileID: 6459418584008008071, guid: 8761a13b5fe690343ba854c31eb164e3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8091899031069183345, guid: 8761a13b5fe690343ba854c31eb164e3, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -10912,7 +10936,7 @@ PrefabInstance:
     - target: {fileID: 8091899031069183345, guid: 8761a13b5fe690343ba854c31eb164e3, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: 6039a2da1a3dd3d449ae6f56fe4059eb, type: 2}
     - target: {fileID: 8091899031069183345, guid: 8761a13b5fe690343ba854c31eb164e3, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
@@ -11994,7 +12018,7 @@ GameObject:
   - component: {fileID: 565163906}
   - component: {fileID: 565163908}
   - component: {fileID: 565163907}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Zona Cables (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12732,14 +12756,6 @@ PrefabInstance:
       value: Pastel2
       objectReference: {fileID: 0}
     - target: {fileID: 8824233723187084818, guid: 72c455a25794eb54f84d92efaae81de5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 150.12532
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824233723187084818, guid: 72c455a25794eb54f84d92efaae81de5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 150.1253
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824233723187084818, guid: 72c455a25794eb54f84d92efaae81de5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.96
       objectReference: {fileID: 0}
@@ -13034,14 +13050,6 @@ PrefabInstance:
     - target: {fileID: 3879474338266057159, guid: 6fa9d57400ddce747936e7a07d7a5e29, type: 3}
       propertyPath: m_Name
       value: PLato (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4511896506364056445, guid: 6fa9d57400ddce747936e7a07d7a5e29, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 341.54144
-      objectReference: {fileID: 0}
-    - target: {fileID: 4511896506364056445, guid: 6fa9d57400ddce747936e7a07d7a5e29, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 341.54144
       objectReference: {fileID: 0}
     - target: {fileID: 4511896506364056445, guid: 6fa9d57400ddce747936e7a07d7a5e29, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13465,6 +13473,10 @@ PrefabInstance:
     - target: {fileID: 2047159177095966297, guid: 7aea50fe39e49334c8c9b9e0528a98fb, type: 3}
       propertyPath: m_Name
       value: cajones (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047159177095966297, guid: 7aea50fe39e49334c8c9b9e0528a98fb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14811,18 +14823,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 348854750}
     m_Modifications:
-    - target: {fileID: 378945517041594771, guid: bb34c835f40c47f4890618d27d09701b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 250.9339
-      objectReference: {fileID: 0}
-    - target: {fileID: 378945517041594771, guid: bb34c835f40c47f4890618d27d09701b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 250.9339
-      objectReference: {fileID: 0}
-    - target: {fileID: 378945517041594771, guid: bb34c835f40c47f4890618d27d09701b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 250.9339
-      objectReference: {fileID: 0}
     - target: {fileID: 378945517041594771, guid: bb34c835f40c47f4890618d27d09701b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.37676
@@ -17909,6 +17909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zona Codigo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5817599918155812565, guid: 9c95810500023a94981ed4aa20d09436, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7284145351019330319, guid: 9c95810500023a94981ed4aa20d09436, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -20524,6 +20528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Silla1Negra (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 211210754561454061, guid: f41bdb0e544cff84fbaecca6933d49ae, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 695119649700902231, guid: f41bdb0e544cff84fbaecca6933d49ae, type: 3}
       propertyPath: m_LocalScale.x
       value: 214.02002
@@ -20590,10 +20598,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 348854750}
     m_Modifications:
-    - target: {fileID: 3095214355244454479, guid: 0d944f8b09dddac4fa1ec1494babfb3f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 620.52094
-      objectReference: {fileID: 0}
     - target: {fileID: 3095214355244454479, guid: 0d944f8b09dddac4fa1ec1494babfb3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.821917
@@ -21420,6 +21424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: repisaMatas (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7832532891143753335, guid: 8c2b62b06432ee04b9661840fa7306e6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21493,6 +21501,10 @@ PrefabInstance:
     - target: {fileID: 8043656055264719306, guid: 3c63ac1865c896c44a376dbd4eb290c0, type: 3}
       propertyPath: m_Name
       value: mesasiu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043656055264719306, guid: 3c63ac1865c896c44a376dbd4eb290c0, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21583,18 +21595,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 348854750}
     m_Modifications:
-    - target: {fileID: 3925727769216095744, guid: 3a637d49c3090e74c8384883b0cc929b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 200.51154
-      objectReference: {fileID: 0}
-    - target: {fileID: 3925727769216095744, guid: 3a637d49c3090e74c8384883b0cc929b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 200.51155
-      objectReference: {fileID: 0}
-    - target: {fileID: 3925727769216095744, guid: 3a637d49c3090e74c8384883b0cc929b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 200.51154
-      objectReference: {fileID: 0}
     - target: {fileID: 3925727769216095744, guid: 3a637d49c3090e74c8384883b0cc929b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.202566
@@ -22587,6 +22587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zona Codigo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5817599918155812565, guid: 9c95810500023a94981ed4aa20d09436, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7284145351019330319, guid: 9c95810500023a94981ed4aa20d09436, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -23248,6 +23252,10 @@ PrefabInstance:
     - target: {fileID: 8655213669373205582, guid: e3997e8c2df154e4d92a0d5a56214967, type: 3}
       propertyPath: m_Name
       value: enfermeriaCapsula
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655213669373205582, guid: e3997e8c2df154e4d92a0d5a56214967, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24764,6 +24772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cajones (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2047159177095966297, guid: 7aea50fe39e49334c8c9b9e0528a98fb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25373,6 +25385,10 @@ PrefabInstance:
       propertyPath: tiempoCierreAutomatico
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8454115853863707655, guid: 2d60e15932f33d848a1901880f326f6f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25619,6 +25635,10 @@ PrefabInstance:
     - target: {fileID: 7832532891143753335, guid: 8c2b62b06432ee04b9661840fa7306e6, type: 3}
       propertyPath: m_Name
       value: repisaMatas (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832532891143753335, guid: 8c2b62b06432ee04b9661840fa7306e6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25943,6 +25963,10 @@ PrefabInstance:
     - target: {fileID: 253363112444079426, guid: f5834df82f2eea64e93186b5a31cc792, type: 3}
       propertyPath: m_Name
       value: sillaGay
+      objectReference: {fileID: 0}
+    - target: {fileID: 253363112444079426, guid: f5834df82f2eea64e93186b5a31cc792, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 634990797470234616, guid: f5834df82f2eea64e93186b5a31cc792, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30070,6 +30094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zona Fusible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0c33f39a170962479d8a259a18e03d2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -30751,18 +30779,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 229840630}
     m_Modifications:
     - target: {fileID: 6042643534110564883, guid: c8e6edbc723f8c3469a71316e9614d2f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 169.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042643534110564883, guid: c8e6edbc723f8c3469a71316e9614d2f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 169.89001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042643534110564883, guid: c8e6edbc723f8c3469a71316e9614d2f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 169.88997
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042643534110564883, guid: c8e6edbc723f8c3469a71316e9614d2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.632965
       objectReference: {fileID: 0}
@@ -31331,6 +31347,10 @@ PrefabInstance:
     - target: {fileID: 7434064462669402239, guid: bd5fd81e8d0160441bcdac8c498a6b8f, type: 3}
       propertyPath: m_Name
       value: Tableta11 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434064462669402239, guid: bd5fd81e8d0160441bcdac8c498a6b8f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7809464479396367045, guid: bd5fd81e8d0160441bcdac8c498a6b8f, type: 3}
       propertyPath: m_LocalScale.x
@@ -32459,6 +32479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mesasiu (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8043656055264719306, guid: 3c63ac1865c896c44a376dbd4eb290c0, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32596,6 +32620,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b0c33f39a170962479d8a259a18e03d2, type: 3}
       propertyPath: m_Name
       value: Zona Fusible
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0c33f39a170962479d8a259a18e03d2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33004,6 +33032,10 @@ PrefabInstance:
     - target: {fileID: 3189402795073379302, guid: 20ad4a96d8972de4d863533cb82a0789, type: 3}
       propertyPath: m_Name
       value: Computador y Mesa
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189402795073379302, guid: 20ad4a96d8972de4d863533cb82a0789, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3982295332885314099, guid: 20ad4a96d8972de4d863533cb82a0789, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -33970,6 +34002,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 762398001}
+    - target: {fileID: 9085598740537826010, guid: 9c95810500023a94981ed4aa20d09436, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35564,6 +35600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maquina
       objectReference: {fileID: 0}
+    - target: {fileID: 2476015274855529823, guid: 257f0bbb4ef41064182fba588043e786, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2960908306249689061, guid: 257f0bbb4ef41064182fba588043e786, type: 3}
       propertyPath: m_LocalScale.x
       value: 474.32977
@@ -35717,6 +35757,10 @@ PrefabInstance:
     - target: {fileID: 2047159177095966297, guid: 7aea50fe39e49334c8c9b9e0528a98fb, type: 3}
       propertyPath: m_Name
       value: cajones
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047159177095966297, guid: 7aea50fe39e49334c8c9b9e0528a98fb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36688,6 +36732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Silla1Negra
       objectReference: {fileID: 0}
+    - target: {fileID: 211210754561454061, guid: f41bdb0e544cff84fbaecca6933d49ae, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 695119649700902231, guid: f41bdb0e544cff84fbaecca6933d49ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.729999
@@ -36749,6 +36797,10 @@ PrefabInstance:
     - target: {fileID: 3914363325922428725, guid: c35d052ccb2e1284bb70d00187ef58ca, type: 3}
       propertyPath: m_Name
       value: casilleros
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914363325922428725, guid: c35d052ccb2e1284bb70d00187ef58ca, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4402633777530805647, guid: c35d052ccb2e1284bb70d00187ef58ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -38653,6 +38705,10 @@ PrefabInstance:
     - target: {fileID: 7434064462669402239, guid: bd5fd81e8d0160441bcdac8c498a6b8f, type: 3}
       propertyPath: m_Name
       value: Tableta11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434064462669402239, guid: bd5fd81e8d0160441bcdac8c498a6b8f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7809464479396367045, guid: bd5fd81e8d0160441bcdac8c498a6b8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42511,6 +42567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computador y Mesa (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3189402795073379302, guid: 20ad4a96d8972de4d863533cb82a0789, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43503,6 +43563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: repisaMatas (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7832532891143753335, guid: 8c2b62b06432ee04b9661840fa7306e6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -43933,6 +43997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TanqueOxi
       objectReference: {fileID: 0}
+    - target: {fileID: 8268354242147936032, guid: eb14f5c72c829f143adbc607bf0328a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8787869554406735258, guid: eb14f5c72c829f143adbc607bf0328a4, type: 3}
       propertyPath: m_LocalScale.x
       value: 168.0862
@@ -44135,6 +44203,10 @@ PrefabInstance:
     - target: {fileID: 4218719774869016359, guid: 386914bc4df91c345b0add35e6412f1e, type: 3}
       propertyPath: m_Name
       value: camilla
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218719774869016359, guid: 386914bc4df91c345b0add35e6412f1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45186,6 +45258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: estanteria
       objectReference: {fileID: 0}
+    - target: {fileID: 3362939952199589504, guid: 2e5004ee11f54094497cc8ddd3bea197, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46125,7 +46201,7 @@ GameObject:
   - component: {fileID: 240968102719124349}
   - component: {fileID: 1764390147775737782}
   - component: {fileID: 1809922231941980643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icono Enfermeria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
